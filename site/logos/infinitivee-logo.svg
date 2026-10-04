@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168" height="40" viewBox="0 0 168 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Infinity Symbol -->
+  <path d="M8 20C8 15.5817 11.5817 12 16 12C20.4183 12 24 15.5817 24 20C24 24.4183 20.4183 28 16 28C11.5817 28 8 24.4183 8 20ZM24 20C24 15.5817 27.5817 12 32 12C36.4183 12 40 15.5817 40 20C40 24.4183 36.4183 28 32 28C27.5817 28 24 24.4183 24 20Z" fill="url(#gradient1)" stroke="url(#gradient2)" stroke-width="1.5"/>
+  
+  <!-- Company Name -->
+  <text x="52" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="white">astraealink</text>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Apply glow to infinity symbol -->
+  <path d="M8 20C8 15.5817 11.5817 12 16 12C20.4183 12 24 15.5817 24 20C24 24.4183 20.4183 28 16 28C11.5817 28 8 24.4183 8 20ZM24 20C24 15.5817 27.5817 12 32 12C36.4183 12 40 15.5817 40 20C40 24.4183 36.4183 28 32 28C27.5817 28 24 24.4183 24 20Z" fill="none" stroke="#ffffff" stroke-width="2" filter="url(#glow)" opacity="0.6"/>
+</svg> 

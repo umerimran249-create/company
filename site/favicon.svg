@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Infinity Symbol for Favicon -->
+  <path d="M4 16C4 12.6863 6.68629 10 10 10C13.3137 10 16 12.6863 16 16C16 19.3137 13.3137 22 10 22C6.68629 22 4 19.3137 4 16ZM16 16C16 12.6863 18.6863 10 22 10C25.3137 10 28 12.6863 28 16C28 19.3137 25.3137 22 22 22C18.6863 22 16 19.3137 16 16Z" fill="url(#gradient1)" stroke="url(#gradient2)" stroke-width="1.5"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+</svg> 
