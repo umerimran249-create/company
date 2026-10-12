@@ -1,0 +1,4 @@
+start
+goto
+ready {'theme': 'dark', 'sets': 0, 'has': 'function'}
+calling set light

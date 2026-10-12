@@ -1,0 +1,2485 @@
+[
+  {
+    "page": "/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch Make your website accessible. Keep it out of court. Accessibility audits, optional code fixes, and ongoing monitoring for growing online businesses. See Mo",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "lenis",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "applied": {
+      "className": "lenis astra-readable astra-contrast",
+      "theme": "light",
+      "themeSource": "light",
+      "storedTheme": "light",
+      "storedA11y": "{\"font\":0,\"readable\":true,\"links\":false,\"headings\":false,\"contrast\":true,\"spacing\":false,\"leading\":false,\"motion\":false,\"cursor\":false,\"guide\":false}"
+    },
+    "persisted": {
+      "className": "",
+      "theme": "light",
+      "themeSource": "light",
+      "storedTheme": "light",
+      "storedA11y": "{\"font\":0,\"readable\":true,\"links\":false,\"headings\":false,\"contrast\":true,\"spacing\":false,\"leading\":false,\"motion\":false,\"cursor\":false,\"guide\":false}",
+      "err": false
+    },
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/about/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch The Experts We've assembled a team of dedicated software engineers and developers who share the same passion for innovative technology and digital transfor",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "lenis",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/works/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch Collection of Our Works Case studies offer a unique opportunity to explore real-world examples of challenges, solutions, and results. 3Musafir Web Developm",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "lenis",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/contact/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/plans/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch Plans Three ways to get accessible Every plan starts with a real audit. Prices are shown on each tier. TIER 1 Comprehensive Audit $9,500 one-time 50+ pages",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": []
+  },
+  {
+    "page": "/works/casestudy1/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch Market Analysis 8 min read Dec 2024 Digital Market Future The New Era of the Digital Landscape: Where Do We Think the Market Is Going? Overview In an era w",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/works/casestudy2/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch Technology Trends 12 min read Nov 2024 Tech Evolution Ahead Navigating the Complex Ecosystem of Emerging Technologies Overview As technology continues to e",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/works/casestudy3/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Skip to content Home About Works Plans Get In Touch Get In Touch Strategy & Innovation 10 min read Oct 2024 Navigating Trends Strategic Approaches to Trend Analysis and Market Positioning Overview In today's volatile mar",
+      "hasOpen": true,
+      "openVis": {
+        "hiddenAttr": false,
+        "display": "grid",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(22, 22, 22)",
+        "bg": "rgb(248, 80, 48)",
+        "w": 52,
+        "h": 52
+      },
+      "hasPanel": true,
+      "panelVis": {
+        "hiddenAttr": true,
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 0,
+        "h": 0
+      },
+      "buttons": [
+        {
+          "text": "\u00d7",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Day & night",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Light",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Dark",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text size",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Readable font",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight links",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Highlight headings",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Higher contrast",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Text spacing",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Line height",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Pause motion",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Bigger cursor",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reading guide",
+          "hiddenAttr": false,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Reset options",
+          "hiddenAttr": false,
+          "display": "inline-block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "theme": "dark",
+      "themeSource": "auto",
+      "className": "",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": {
+      "panel": {
+        "hiddenAttr": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "color": "rgb(240, 240, 232)",
+        "bg": "rgb(26, 26, 26)",
+        "w": 328,
+        "h": 568
+      },
+      "badButtons": [],
+      "buttonCount": 15,
+      "buttonSample": [
+        {
+          "text": "\u00d7",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Day & night",
+          "color": "rgb(22, 22, 22)",
+          "bg": "rgb(248, 80, 48)"
+        },
+        {
+          "text": "Light",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Dark",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text size",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Readable font",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight links",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Highlight headings",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Higher contrast",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Text spacing",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Line height",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Pause motion",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Bigger cursor",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reading guide",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Reset options",
+          "color": "rgb(240, 240, 232)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    "exception": "Page.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-theme-choice='light']\")\n  -     - locator resolved to <button type=\"button\" aria-pressed=\"false\" data-theme-choice=\"light\">Light</button>\n  -   - attempting click action\n  -     - waiting for element to be visible, enabled and stable\n  -     - element is visible, enabled and stable\n  -     - scrolling into view if needed\n  -     - done scrolling\n  -     - performing click action\n",
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "page": "/works/casestudy4/",
+    "console": [],
+    "before": {
+      "err": false,
+      "snippet": "Home About Works Plans Get In Touch Get In Touch",
+      "hasOpen": false,
+      "openVis": null,
+      "hasPanel": false,
+      "panelVis": null,
+      "buttons": [],
+      "theme": null,
+      "themeSource": null,
+      "className": "",
+      "astraCss": true,
+      "script": true
+    },
+    "errors_before_click": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ],
+    "opened": null,
+    "pageerrors": [
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+      "Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  }
+]

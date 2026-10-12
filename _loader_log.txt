@@ -1,0 +1,5 @@
+import
+launch
+launched
+path light /about/
+goto done

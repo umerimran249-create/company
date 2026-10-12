@@ -44,7 +44,6 @@ html[data-theme="light"] .border-padding,
 html[data-theme="light"] .normal-padding,
 html[data-theme="light"] .projects-carousel-item,
 html[data-theme="light"] .showreel-content-videobox-background,
-html[data-theme="light"] .works-carousel-wrapper-overlay,
 html[data-theme="light"] .about-sticky-item,
 html[data-theme="light"] .case-study-page {
   background-color: var(--astra-bg) !important;
@@ -688,66 +687,258 @@ html.astra-cursor * {
   .astra-options { grid-template-columns: 1fr; }
 }
 
-/* Nav stays visible on every page, including when GSAP sets inline opacity/transform. */
-.navigation-inside {
-  opacity: 1 !important;
-  transform: none !important;
-  pointer-events: auto !important;
-  visibility: visible !important;
-  width: 100% !important;
+/* Nav labels.
+   `.navigation-inside-big a { color: inherit }` beats `.white { color: #fff }`.
+   Nothing above those links sets a color, so they inherit black and disappear
+   on the dark bar. The homepage also loses data-theme after hydration, so the
+   readable color cannot depend on that attribute alone.
+   Opacity is left to GSAP: inline styles still fade the bar in. Only the
+   `.opacity` class (opacity: 0) is overridden, and without !important, so the
+   intro can still animate. */
+.navigation-inside-big a,
+.navigation-inside-big a.small-description,
+.navigation-inside-big a.white,
+.navigation-inside-big a.hover-text-white,
+.navigation-mobile-menu a,
+.navigation-inside-right a.button,
+.navigation-inside-right .button .small-description,
+.navigation-inside-right .button-content span {
+  color: #f0f0e8 !important;
+  -webkit-text-fill-color: #f0f0e8 !important;
 }
 
-.navigation-inside-big {
+html[data-theme="dark"] .navigation-inside-big a,
+html[data-theme="dark"] .navigation-inside-big a.small-description,
+html[data-theme="dark"] .navigation-inside-big a.white,
+html[data-theme="dark"] .navigation-inside-big a.hover-text-white,
+html[data-theme="dark"] .navigation-mobile-menu a,
+html[data-theme="dark"] .navigation-inside-right a.button,
+html[data-theme="dark"] .navigation-inside-right .button .small-description,
+html[data-theme="dark"] .navigation-inside-right .button-content span {
+  color: #f0f0e8 !important;
+  -webkit-text-fill-color: #f0f0e8 !important;
+}
+
+html[data-theme="light"] .navigation-inside-big a,
+html[data-theme="light"] .navigation-inside-big a.small-description,
+html[data-theme="light"] .navigation-inside-big a.white,
+html[data-theme="light"] .navigation-inside-big a.hover-text-white,
+html[data-theme="light"] .navigation-mobile-menu a,
+html[data-theme="light"] .navigation-inside-right a.button,
+html[data-theme="light"] .navigation-inside-right .button .small-description,
+html[data-theme="light"] .navigation-inside-right .button-content span {
+  color: #101010 !important;
+  -webkit-text-fill-color: #101010 !important;
+}
+
+.navigation-inside-big a.opacity,
+.navigation-mobile-menu a.opacity {
+  opacity: 1;
+}
+
+.navigation-inside-big .hover-text-white:after {
+  background-color: #f0f0e8;
+}
+
+html[data-theme="dark"] .navigation-inside-big .hover-text-white:after {
+  background-color: #f0f0e8;
+}
+
+html[data-theme="light"] .navigation-inside-big .hover-text-white:after {
+  background-color: #101010;
+}
+body.static-page section.contact {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+/* Compiled CSS starts the bar at opacity 0 and translateY(-12.5vh).
+   GSAP is supposed to fade it in. If that animation never runs (About's
+   client bundle throws before the tweens finish), the static nav stays
+   invisible. These rules hold the finished, on-screen state. The bar is
+   position:fixed and about one viewport-header tall, so it does not cover
+   the page. Desktop link row is display:flex so an interrupted GSAP
+   fromTo(display:none) cannot leave the labels hidden. */
+.navigation-wrapper,
+.navigation-inside,
+.navigation-inside-left,
+.navigation-inside-big,
+.navigation-inside-right {
   opacity: 1 !important;
   visibility: visible !important;
-  pointer-events: auto !important;
+}
+
+.navigation-inside {
+  transform: none !important;
+  width: 100% !important;
 }
 
 @media (min-width: 769px) {
   .navigation-inside-big,
   .navigation-inside-right {
     display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
   }
 }
 
-@media (max-width: 768px) {
-  .navigation-inside-big,
-  .navigation-inside-right {
-    display: none !important;
-  }
+/* Light mode: the works carousel overlay is a full-bleed #010101 veil
+   with backdrop-filter blur, built to melt into the dark page. Painting
+   that veil with the cream background washes the project photos. Hide it.
+   Dark mode keeps the original overlay. */
+html[data-theme="light"] .works-carousel-wrapper-overlay {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  opacity: 0 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
 }
 
-.navigation-inside-big a,
-.navigation-inside-big a.opacity,
-.navigation-inside-big .small-description,
-.navigation-inside-big .white,
-.navigation-mobile-menu a {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
+html[data-theme="light"] .works-item-content-image,
+html[data-theme="light"] .projects-carousel-item-image,
+html[data-theme="light"] .casestudies-item img,
+html[data-theme="light"] .about-content-imagebox img {
+  filter: none !important;
 }
 
-html[data-theme="dark"] .navigation-inside-big a,
-html[data-theme="dark"] .navigation-inside-big .small-description,
-html[data-theme="dark"] .navigation-inside-big .white,
-html[data-theme="dark"] .navigation-mobile-menu a {
-  color: #f0f0e8 !important;
+html[data-theme="light"] .works-item-border {
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.16) !important;
 }
 
-html[data-theme="light"] .navigation-inside-big a,
-html[data-theme="light"] .navigation-inside-big .small-description,
-html[data-theme="light"] .navigation-inside-big .white,
-html[data-theme="light"] .navigation-mobile-menu a {
+html[data-theme="light"] .white,
+html[data-theme="light"] .headline,
+html[data-theme="light"] .subheadline,
+html[data-theme="light"] .small-subheadline,
+html[data-theme="light"] .description,
+html[data-theme="light"] .big-description,
+html[data-theme="light"] .small-description,
+html[data-theme="light"] .grey {
+  -webkit-text-fill-color: currentColor;
+}
+
+html[data-theme="light"] .carousel-button {
+  color: #101010 !important;
+  background-color: rgba(16, 16, 16, 0.06) !important;
+  border: 1px solid rgba(16, 16, 16, 0.16) !important;
+}
+
+html[data-theme="light"] .carousel-button svg,
+html[data-theme="light"] .carousel-button path {
+  color: #101010 !important;
+  fill: currentColor !important;
+}
+
+html[data-theme="light"] .footer-socials-icon,
+html[data-theme="light"] .subheadline-box-icon,
+html[data-theme="light"] .footer-socials-icon svg,
+html[data-theme="light"] .subheadline-box-icon svg {
   color: #101010 !important;
 }
 
-.navigation-inside { opacity:1 !important; transform:none !important; visibility:visible !important; }
-html[data-theme="dark"] .navigation-inside-big a, html[data-theme="dark"] .navigation-mobile-menu a { color:#f0f0e8 !important; opacity:1 !important; }
-html[data-theme="light"] .navigation-inside-big a, html[data-theme="light"] .navigation-mobile-menu a { color:#101010 !important; opacity:1 !important; }
-body.static-page section.contact {
-  height: auto !important;
-  min-height: 0 !important;
-  overflow: visible !important;
+html[data-theme="light"] .hover-text-white:after,
+html[data-theme="light"] .hover-text-grey:after {
+  background-color: #101010;
+}
+
+html[data-theme="light"] .project-modal-close,
+html[data-theme="light"] .modal-close {
+  background: rgba(16, 16, 16, 0.06) !important;
+  border-color: rgba(16, 16, 16, 0.22) !important;
+  color: #101010 !important;
+}
+
+html[data-theme="light"] .project-modal-close svg,
+html[data-theme="light"] .modal-close svg,
+html[data-theme="light"] .project-modal-close path,
+html[data-theme="light"] .modal-close path {
+  color: #101010 !important;
+  stroke: #101010 !important;
+}
+
+html[data-theme="light"] .button-circle,
+html[data-theme="light"] .button-circle-white,
+html[data-theme="light"] .button-circle svg,
+html[data-theme="light"] .button-circle-white svg,
+html[data-theme="light"] .button-circle path,
+html[data-theme="light"] .button-circle-white path {
+  color: #f8f8f0 !important;
+  stroke: #f8f8f0;
+  fill: currentColor;
+}
+
+html[data-theme="light"] .button-circle,
+html[data-theme="light"] .button-circle-white {
+  background: #101010 !important;
+}
+
+html[data-theme="light"] .hero-content,
+html[data-theme="light"] .team-member-title,
+html[data-theme="light"] .skills-title,
+html[data-theme="light"] .phone-link,
+html[data-theme="light"] .modal-title,
+html[data-theme="light"] .form-label,
+html[data-theme="light"] .input-icon,
+html[data-theme="light"] .btn-secondary,
+html[data-theme="light"] .project-modal-title,
+html[data-theme="light"] .project-modal-subtitle,
+html[data-theme="light"] .project-modal-link,
+html[data-theme="light"] .project-modal-section-title,
+html[data-theme="light"] .project-modal-section-content,
+html[data-theme="light"] .project-modal-feature,
+html[data-theme="light"] .project-modal-stat-label,
+html[data-theme="light"] .project-modal-stat-number,
+html[data-theme="light"] .project-modal-close-icon,
+html[data-theme="light"] .casestudy-navigation-button-icon,
+html[data-theme="light"] .casestudies-item-content-imagebox-button-icon,
+html[data-theme="light"] .contact-content-small-item-icon,
+html[data-theme="light"] .content-section h2,
+html[data-theme="light"] .content-section h3,
+html[data-theme="light"] .content-section p,
+html[data-theme="light"] .content-section li,
+html[data-theme="light"] .insights-list li,
+html[data-theme="light"] .results-list li,
+html[data-theme="light"] .case-study-subtitle,
+html[data-theme="light"] .case-study-meta,
+html[data-theme="light"] .about-sticky-item,
+html[data-theme="light"] .about-sticky-item p,
+html[data-theme="light"] .about-sticky-item h1,
+html[data-theme="light"] .about-sticky-item h2,
+html[data-theme="light"] .about-sticky-item li {
+  color: #101010 !important;
+  -webkit-text-fill-color: currentColor;
+}
+
+html[data-theme="light"] .form-input::placeholder,
+html[data-theme="light"] .form-textarea::placeholder {
+  color: rgba(16, 16, 16, 0.45) !important;
+}
+
+html[data-theme="light"] .btn-secondary,
+html[data-theme="light"] .project-modal-link {
+  background: rgba(16, 16, 16, 0.05) !important;
+  border-color: rgba(16, 16, 16, 0.18) !important;
+}
+
+html[data-theme="light"] .project-modal-cta {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+html[data-theme="light"] .techstack-item-content-column-bottom-button,
+html[data-theme="light"] .kpi-item-button {
+  color: #101010 !important;
+  border-color: rgba(16, 16, 16, 0.16) !important;
+  background-color: rgba(16, 16, 16, 0.05) !important;
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.12) !important;
+}
+
+html[data-theme="light"] .kpi-item-button-icon,
+html[data-theme="light"] .kpi-item-button svg,
+html[data-theme="light"] .kpi-item-button path {
+  color: #101010 !important;
+  fill: currentColor;
+  stroke: currentColor;
 }

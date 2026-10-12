@@ -1,0 +1,6 @@
+page-af5bc7c15d08ee71.js initial-loading-screen=1
+i.jsx)("div",{className:"kpi-item-grid"})]})]})]})})};t(2855);var ee=t(432),es=t(8148),et=()=>{let{progress:e}=(0,ee.S)(),[s,t]=(0,a.useState)(!1),c=(0,r.LZ)();return(0,a.useLayoutEffect)(()=>{100===e&&(t(!0),null==c||c.start())},[e,c]),(0,i.jsxs)(r.pi,{root:!0,children:[(0,i.jsx)("div",{className:"initial-loading-screen ".concat(s?"fade-out":""),children:(0,i.jsx)("div",{className:"loading-image-box",children:(0,i.jsx)(es.default,{})})}),(0,i.jsx)(k,{}),(0,i.jsx)("div",{className:"normal-paddin
+---
+page-af5bc7c15d08ee71.js loading-screen=1
+div",{className:"kpi-item-grid"})]})]})]})})};t(2855);var ee=t(432),es=t(8148),et=()=>{let{progress:e}=(0,ee.S)(),[s,t]=(0,a.useState)(!1),c=(0,r.LZ)();return(0,a.useLayoutEffect)(()=>{100===e&&(t(!0),null==c||c.start())},[e,c]),(0,i.jsxs)(r.pi,{root:!0,children:[(0,i.jsx)("div",{className:"initial-loading-screen ".concat(s?"fade-out":""),children:(0,i.jsx)("div",{className:"loading-image-box",children:(0,i.jsx)(es.default,{})})}),(0,i.jsx)(k,{}),(0,i.jsx)("div",{className:"normal-padding"}),(0,
+---
