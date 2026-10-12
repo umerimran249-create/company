@@ -2,4 +2,37 @@ import
 launch
 launched
 path light /about/
-goto done
+goto http://127.0.0.1:4173/
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+first {"url": "/", "theme": "light", "initial": {"className": "initial-loading-screen ", "opacity": "1", "visibility": "visible", "display": "flex", "z": "9999", "bg": "rgb(248, 248, 240)", "anim": "none", "w": 1280, "h": 800}, "loading": null, "coveredInitial": true, "coveredLoading": false, "chain": ["CANVAS.", "DIV.", "DIV.", "DIV.hero-content-right", "DIV.hero-content-row"], "hero": {"text": "Make your website accessible. Keep it out of court.", "opacity": "1", "top": 176, "h": 320, "vis": "visible"}}
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+mid {"url": "/about/", "theme": null, "initial": null, "loading": null, "coveredInitial": false, "coveredLoading": false, "chain": ["DIV.about-team-container", "DIV.about-team", "DIV.about-content", "SECTION.about", "BODY."], "hero": null}
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+back {"url": "/", "theme": "light", "initial": {"className": "initial-loading-screen fade-out", "opacity": "0", "visibility": "visible", "display": "none", "z": "9999", "bg": "rgb(248, 248, 240)", "anim": "fade-out", "w": 0, "h": 0}, "loading": null, "coveredInitial": false, "coveredLoading": false, "chain": ["CANVAS.", "DIV.", "DIV.", "DIV.hero-content-right", "DIV.hero-content-row"], "hero": {"text": "Make your website accessible. Keep it out of court.", "opacity": "1", "top": 176, "h": 320, "vis": "visible"}}
+path dark /about/
+goto http://127.0.0.1:4173/
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+first {"url": "/", "theme": "dark", "initial": {"className": "initial-loading-screen ", "opacity": "1", "visibility": "visible", "display": "flex", "z": "9999", "bg": "rgb(16, 16, 16)", "anim": "none", "w": 1280, "h": 800}, "loading": null, "coveredInitial": true, "coveredLoading": false, "chain": ["CANVAS.", "DIV.", "DIV.", "DIV.hero-content-right", "DIV.hero-content-row"], "hero": {"text": "Make your website accessible. Keep it out of court.", "opacity": "1", "top": 176, "h": 320, "vis": "visible"}}
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+mid {"url": "/about/", "theme": "dark", "initial": null, "loading": null, "coveredInitial": false, "coveredLoading": false, "chain": ["DIV.about-team-item", "DIV.about-team-container", "DIV.about-team", "DIV.about-content", "SECTION.about"], "hero": null}
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+pageerror Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+back {"url": "/", "theme": "dark", "initial": {"className": "initial-loading-screen ", "opacity": "1", "visibility": "visible", "display": "flex", "z": "9999", "bg": "rgb(16, 16, 16)", "anim": "none", "w": 1280, "h": 800}, "loading": null, "coveredInitial": true, "coveredLoading": false, "chain": ["CANVAS.", "DIV.", "DIV.", "DIV.hero-content-right", "DIV.hero-content-row"], "hero": {"text": "Make your website accessible. Keep it out of court.", "opacity": "1", "top": 176, "h": 320, "vis": "visible"}}
+DONE

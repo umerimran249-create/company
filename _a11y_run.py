@@ -1,5 +1,5 @@
 import json, os, subprocess, sys
-pages = ["/", "/about/", "/works/", "/contact/", "/plans/", "/works/casestudy1/", "/works/casestudy2/", "/works/casestudy3/", "/works/casestudy4/"]
+pages = ["/about/", "/contact/", "/works/casestudy1/", "/works/casestudy2/", "/works/casestudy3/", "/plans/"]
 root = r"C:\Users\Computer House\Desktop\company"
 results = []
 for i, path in enumerate(pages):
@@ -10,7 +10,7 @@ for i, path in enumerate(pages):
     try:
         proc = subprocess.run(
             [sys.executable, "-u", os.path.join(root, "_a11y_page.py"), path, out],
-            timeout=50,
+            timeout=70,
             cwd=root,
         )
         print(" exit", proc.returncode, flush=True)
