@@ -354,23 +354,9 @@ body.static-page section.page-block {
   font-weight: 700;
 }
 
-.plan-price {
-  display: block !important;
-  margin: 0.35rem 0 0 !important;
-  color: var(--astra-accent) !important;
-  font-size: clamp(2rem, 3vw, 2.8rem) !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  overflow: visible !important;
-  height: auto !important;
-}
-
-.plan-price span {
-  color: var(--astra-muted) !important;
-  font-size: 0.95rem !important;
-  font-weight: 500 !important;
+.plan-price,
+.plan-price-row {
+  display: none !important;
 }
 
 .plan-note {
@@ -941,4 +927,1106 @@ html[data-theme="light"] .kpi-item-button path {
   color: #101010 !important;
   fill: currentColor;
   stroke: currentColor;
+}
+
+/* Home keeps .initial-loading-screen up until THREE progress is exactly 100.
+   Client-side returns remount it without .fade-out, and light mode paints
+   that fixed layer with the page background, so the hero looks stuck behind
+   a blank screen. Dismiss it even when the progress flag never arrives.
+   .fade-out stays more specific and can still hide the intro earlier. */
+.initial-loading-screen,
+.loading-screen,
+.website-loading-screen {
+  animation: astra-loader-dismiss 0.2s ease 1.6s forwards;
+}
+
+@keyframes astra-loader-dismiss {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+html[data-astra-loader="done"] .initial-loading-screen,
+html[data-astra-loader="done"] .loading-screen,
+html[data-astra-loader="done"] .website-loading-screen {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  animation: none !important;
+}
+
+a.contact-content-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-content-row:has(.meeting-form) {
+  gap: clamp(1.5rem, 2.25vw, 2rem);
+}
+
+.contact-content-right:has(.meeting-form) {
+  height: auto !important;
+  min-height: 0;
+  opacity: 1 !important;
+  filter: none !important;
+  visibility: visible !important;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contact-content-right:has(.meeting-form) .floating-orb {
+  display: none !important;
+}
+
+.meeting-form {
+  width: min(100%, 36rem);
+  margin: 0;
+  padding: 1.35rem 1.35rem 1.1rem;
+  border-radius: 10px;
+  scroll-margin-top: 6.5rem;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: rgba(240, 240, 232, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(240, 240, 232, 0.12);
+}
+
+.meeting-kicker,
+.meeting-title,
+.meeting-lead {
+  margin: 0;
+}
+
+.meeting-kicker {
+  color: var(--astra-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.meeting-title {
+  margin-top: 0.35rem;
+  color: var(--astra-text);
+  font-size: clamp(1.55rem, 2vw, 2rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.meeting-lead {
+  margin: 0.55rem 0 1rem;
+  color: var(--astra-muted);
+  line-height: 1.45;
+}
+
+.meeting-form .form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.meeting-form .form-group {
+  margin-bottom: 0.9rem;
+}
+
+.meeting-form .form-label {
+  color: var(--astra-text);
+}
+
+.meeting-form .form-input,
+.meeting-form .form-textarea {
+  color: var(--astra-text);
+  background: rgba(240, 240, 232, 0.06);
+  border: 1px solid rgba(240, 240, 232, 0.18);
+  color-scheme: dark;
+}
+
+.meeting-form .form-input::placeholder,
+.meeting-form .form-textarea::placeholder {
+  color: var(--astra-muted);
+}
+
+.meeting-error {
+  margin: 0.35rem 0 0;
+  color: #ff8f8f;
+  font-size: 0.85rem;
+}
+
+.meeting-form .form-actions {
+  margin-top: 0.4rem;
+  padding-top: 0.8rem;
+}
+
+.meeting-form .btn-primary {
+  min-height: 44px;
+}
+
+html[data-theme="light"] .meeting-form {
+  background: #ffffff !important;
+  box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.12) !important;
+}
+
+html[data-theme="light"] .meeting-form .form-input,
+html[data-theme="light"] .meeting-form .form-textarea {
+  color: #101010 !important;
+  -webkit-text-fill-color: #101010 !important;
+  background: #ffffff !important;
+  border-color: rgba(16, 16, 16, 0.18) !important;
+  color-scheme: light;
+}
+
+html[data-theme="light"] .meeting-error {
+  color: #9d1c1c;
+}
+
+@media (max-width: 900px) {
+  .contact-content-row:has(.meeting-form) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-content-row:has(.meeting-form) .contact-content-left,
+  .contact-content-row:has(.meeting-form) .contact-content-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .meeting-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Phones and small tablets. The compiled CSS sizes most blocks in vw for a
+   desktop grid and has no small-screen rules for testimonials, KPI cards,
+   contact cards or the footer. Everything here stays inside this query so
+   the desktop layout is untouched. */
+@media (max-width: 768px) {
+  :root {
+    --astra-gutter: 5vw;
+    --astra-header: calc(20vw + 0.75rem);
+  }
+
+  section,
+  [id] {
+    scroll-margin-top: var(--astra-header);
+  }
+
+  /* Header: logo left, menu button right. GSAP writes display:flex inline on
+     the desktop link row, and the opacity rules above keep it visible. */
+  .navigation-inside-big,
+  .navigation-inside-right {
+    display: none !important;
+  }
+
+  .navigation-inside,
+  html[data-theme="dark"] .navigation-inside {
+    padding: 0 3.5rem 0 1.1rem;
+    background-color: rgba(16, 16, 16, 0.96);
+    border-color: rgba(240, 240, 232, 0.12);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+
+  html[data-theme="light"] .navigation-inside {
+    background-color: rgba(248, 248, 240, 0.96);
+    border-color: rgba(16, 16, 16, 0.1);
+  }
+
+  .navigation-inside-left-image {
+    width: clamp(128px, 40vw, 160px) !important;
+    max-width: 100%;
+    max-height: 34px;
+  }
+
+  button.navigation-inside-right-mobile {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .navigation-inside-right-mobile::before {
+    content: "";
+    position: absolute;
+    inset: -2px -10px;
+  }
+
+  .navigation-wrapper.is-open .navigation-mobile-menu,
+  body.menu-open .navigation-mobile-menu {
+    gap: 0;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .navigation-mobile-menu a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(240, 240, 232, 0.08);
+  }
+
+  .navigation-mobile-menu a:last-child {
+    border-bottom: 0;
+  }
+
+  html[data-theme="light"] .navigation-mobile-menu a {
+    border-bottom-color: rgba(16, 16, 16, 0.08);
+  }
+
+  /* Type floor: the compiled 3.25vw drops body copy below 12px on phones. */
+  .description {
+    font-size: clamp(0.875rem, 3.6vw, 1rem);
+    line-height: 1.5;
+  }
+
+  .small-description {
+    font-size: clamp(0.8125rem, 3.4vw, 0.9375rem);
+  }
+
+  .big-description {
+    font-size: clamp(0.95rem, 4vw, 1.125rem);
+  }
+
+  .testimonials-content-textbox .subheadline {
+    text-wrap: balance;
+  }
+
+  /* Section pills */
+  .subheadline-box {
+    max-width: 100%;
+    padding: 0.4rem 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .subheadline-box-icon {
+    flex: 0 0 auto;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .subheadline-box .small-description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  /* Showreel: the video is a 1920x868 screen recording. A 150vw-tall box
+     with object-fit:cover cropped most of it away. */
+  .showreel-content-container {
+    height: auto;
+    aspect-ratio: 1920 / 868;
+    border-radius: 14px;
+  }
+
+  .showreel-content-video {
+    object-fit: contain;
+    padding: 0;
+  }
+
+  .showreel-video-playbutton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .showreel-video-playbutton-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .showreel-content {
+    gap: 1rem;
+  }
+
+  .showreel-content-row-item,
+  .showreel-content-row-item-grid {
+    width: auto;
+    flex: 1 1 0;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  /* Testimonials (Embla carousel, still swipeable) */
+  .testimonials-content-textbox,
+  .testimonials-content-bottom {
+    padding: 0 var(--astra-gutter);
+  }
+
+  .testimonials-carousel-row {
+    gap: 0.75rem;
+  }
+
+  .testimonials-item-padding {
+    flex: 0 0 calc(var(--astra-gutter) - 0.75rem);
+  }
+
+  .testimonials-item {
+    flex: 0 0 min(82vw, 380px);
+    height: auto;
+    min-height: 15rem;
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  .testimonials-item-grid {
+    width: 100%;
+    height: 100%;
+  }
+
+  .testimonials-item-content {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  .testimonials-item-content-last {
+    justify-content: center;
+  }
+
+  .testimonials-item-center {
+    gap: 0.2rem;
+  }
+
+  .testimonials-item .big-description {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .testimonials-item .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .testimonials-content-bottom {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .testimonials-content-bottom-buttons {
+    gap: 0.5rem;
+  }
+
+  .button,
+  .contact-button-white {
+    min-height: 44px;
+  }
+
+  .carousel-button {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+  }
+
+  .carousel-button-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .testimonials-content-bottom .embla__progress {
+    height: 2px;
+  }
+
+  /* KPI cards */
+  .kpi-content-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 0.75rem;
+  }
+
+  .kpi-content-item {
+    width: auto;
+    height: auto;
+    padding: 2rem 1.25rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  .kpi-item-grid {
+    width: 100%;
+    height: 100%;
+  }
+
+  .kpi-item-textbox {
+    gap: 0.6rem;
+  }
+
+  .kpi-item-textbox-top {
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .kpi-item-textbox-number {
+    margin-bottom: 0;
+    overflow: visible;
+  }
+
+  .kpi-item-textbox-number-text {
+    font-size: clamp(2.75rem, 13vw, 3.5rem);
+    line-height: 1.05;
+    white-space: nowrap;
+  }
+
+  .kpi-item-textbox-top-text {
+    font-size: 1rem;
+  }
+
+  .kpi-item-textbox .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kpi-item-button {
+    top: 0.9rem;
+    bottom: auto;
+    left: 0.9rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .kpi-item-button-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  html[data-theme="light"] .kpi-item-button svg,
+  html[data-theme="light"] .kpi-item-button path {
+    fill: none;
+  }
+
+  /* Contact cards */
+  .contact-content-column,
+  .contact-content-column-row {
+    gap: 0.6rem;
+  }
+
+  .contact-content-top-item,
+  .contact-content-item {
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+  }
+
+  .contact-content-top-item {
+    gap: 0.75rem;
+  }
+
+  .contact-content-top-item-profile {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .contact-content-item {
+    min-height: 3.5rem;
+    gap: 0.25rem;
+  }
+
+  .contact-content-small-item {
+    min-height: 4rem;
+    padding: 0.75rem 0.5rem;
+    gap: 0.35rem;
+    border-radius: 14px;
+  }
+
+  .contact-content-small-item-icon {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .contact-phone-numbers .phone-link {
+    display: block;
+    padding: 0.3rem 0;
+    font-size: clamp(0.875rem, 3.6vw, 1rem);
+  }
+
+  /* Footer: one column, link columns side by side */
+  .footer {
+    padding: 0 var(--astra-gutter) calc(5rem + env(safe-area-inset-bottom));
+    gap: 1.75rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-content-left,
+  .footer-content-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-content-left {
+    gap: 0.75rem;
+  }
+
+  .footer-logo {
+    width: clamp(150px, 46vw, 190px) !important;
+  }
+
+  .footer-content-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-content-right-column {
+    gap: 0.5rem;
+  }
+
+  .footer-column-contents {
+    gap: 0;
+  }
+
+  .footer-column-contents-item > a,
+  .footer-column-contents-item > p {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    margin: 0;
+  }
+
+  .footer-content-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-socials {
+    gap: 1rem;
+  }
+
+  .footer-socials-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  /* Floating theme / accessibility buttons: one compact row in the corner */
+  .astra-dock {
+    right: calc(0.75rem + env(safe-area-inset-right));
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .astra-fab {
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  }
+
+  .astra-fab svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .astra-panel {
+    max-height: calc(100vh - 6rem);
+    max-height: calc(100dvh - 6rem);
+  }
+
+  /* Services video: compiled CSS sets width:150% / margin-left:-25%, which
+     crops the screen recording on both sides of a phone. */
+  .services-content-container {
+    justify-content: center;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  .services-content-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    margin-left: 0;
+    object-fit: contain;
+  }
+}
+
+/* About page "What we do" cards (Audits / Web Development / AI/ML).
+   Compiled CSS keeps the desktop layout on phones: a row with two 50%
+   columns, gap:10vw, height:85vh and a 35vh image box, which squeezes the
+   text into a narrow column and crops the 3:2 mockups into tall strips. */
+@media (max-width: 768px) {
+  section.about .about-sticky-container {
+    width: 100%;
+  }
+
+  section.about .about-sticky-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    top: 5.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  section.about .about-sticky-item-left,
+  section.about .about-sticky-item-right {
+    width: 100%;
+    height: auto;
+  }
+
+  section.about .about-sticky-item-left {
+    gap: 0.75rem;
+  }
+
+  section.about .about-sticky-item-left-textbox {
+    gap: 0.75rem;
+  }
+
+  section.about .about-sticky-item .headline {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.1;
+  }
+
+  section.about .about-sticky-item-left-textbox-description {
+    text-indent: 0;
+  }
+
+  section.about .about-sticky-item-right-imagebox {
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  section.about .about-sticky-item-right-image {
+    display: block;
+    height: 100%;
+  }
+}
+
+/* ===== Cookie consent (banner, settings dialog, footer link) =====
+   Built by the cookie block at the end of astra.js. While the banner is up,
+   html gets .astra-cookie-open and --astra-cookie-h (banner height) so the
+   floating theme / accessibility dock sits above it instead of under it. */
+:root {
+  --astra-cookie-border: rgba(240, 240, 232, 0.55);
+  --astra-cookie-hover: rgba(240, 240, 232, 0.08);
+}
+
+html[data-theme="light"] {
+  --astra-cookie-border: rgba(16, 16, 16, 0.55);
+  --astra-cookie-hover: rgba(16, 16, 16, 0.06);
+}
+
+.astra-cookie[hidden],
+.astra-cookie-modal[hidden] {
+  display: none !important;
+}
+
+.astra-cookie {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  box-sizing: border-box;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 1.1rem 1.4rem;
+  background: var(--astra-card);
+  color: var(--astra-text);
+  border: 1px solid var(--astra-line);
+  border-radius: 22px;
+  box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  animation: astra-cookie-in 0.3s ease-out;
+}
+
+@keyframes astra-cookie-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.astra-cookie-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
+.astra-cookie-text {
+  flex: 1 1 26rem;
+  min-width: 0;
+}
+
+.astra-cookie-title {
+  margin: 0 0 0.3rem;
+  color: var(--astra-text);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.astra-cookie-msg,
+.astra-cookie-note,
+.astra-cookie-cat-desc {
+  margin: 0;
+  color: var(--astra-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.astra-cookie-msg a {
+  color: var(--astra-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.astra-cookie-actions,
+.astra-cookie-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.astra-cookie-actions {
+  flex: 0 1 auto;
+}
+
+.astra-cookie-btn {
+  min-height: 44px;
+  padding: 0.6rem 1.15rem;
+  border: 1.5px solid var(--astra-cookie-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--astra-text);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.astra-cookie-btn:hover {
+  background: var(--astra-cookie-hover);
+}
+
+.astra-cookie-btn.astra-cookie-primary {
+  background: #f85030;
+  border-color: #f85030;
+  color: #161616;
+}
+
+.astra-cookie-btn.astra-cookie-primary:hover {
+  background: #ff6a4d;
+  border-color: #ff6a4d;
+}
+
+.astra-cookie :focus-visible,
+.astra-cookie-modal :focus-visible {
+  outline: 2px solid #f85030;
+  outline-offset: 3px;
+}
+
+html.astra-cookie-open .astra-dock {
+  bottom: calc(var(--astra-cookie-h, 0px) + 1.75rem);
+}
+
+html.astra-cookie-open .astra-panel {
+  max-height: max(12rem, calc(100vh - var(--astra-cookie-h, 0px) - 10.5rem));
+}
+
+.astra-cookie-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.astra-cookie-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.astra-cookie-dialog {
+  position: relative;
+  box-sizing: border-box;
+  width: min(36rem, 100%);
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  padding: 1.25rem 1.25rem 1.35rem;
+  background: var(--astra-card);
+  color: var(--astra-text);
+  border: 1px solid var(--astra-line);
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  text-align: left;
+}
+
+.astra-cookie-dialog:focus {
+  outline: none;
+}
+
+.astra-cookie-dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.astra-cookie-dialog h2 {
+  margin: 0;
+  color: var(--astra-text);
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.astra-cookie-close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--astra-cookie-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--astra-text);
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.astra-cookie-note {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 0.88rem;
+}
+
+.astra-cookie-cats {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.astra-cookie-cat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--astra-line);
+}
+
+.astra-cookie-cat-text {
+  min-width: 0;
+}
+
+.astra-cookie-cat-name {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--astra-text);
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.astra-cookie-cat-desc {
+  font-size: 0.85rem;
+}
+
+.astra-switch {
+  position: relative;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.astra-switch input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 1.7rem;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.astra-switch input:disabled {
+  cursor: not-allowed;
+}
+
+.astra-switch-track {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 1.7rem;
+  box-sizing: border-box;
+  border: 1.5px solid var(--astra-cookie-border);
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.astra-switch-track::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--astra-text);
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+}
+
+.astra-switch input:checked + .astra-switch-track {
+  background: #f85030;
+  border-color: #f85030;
+}
+
+.astra-switch input:checked + .astra-switch-track::after {
+  background: #161616;
+  transform: translate(1.25rem, -50%);
+}
+
+.astra-switch input:disabled + .astra-switch-track {
+  opacity: 0.6;
+}
+
+.astra-switch input:focus-visible + .astra-switch-track {
+  outline: 2px solid #f85030;
+  outline-offset: 3px;
+}
+
+.astra-switch-note {
+  color: var(--astra-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.astra-cookie-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.astra-cookie-footer-link {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+[data-astra-focus-target]:focus {
+  outline: none;
+}
+
+html.astra-contrast .astra-cookie-msg,
+html.astra-contrast .astra-cookie-note,
+html.astra-contrast .astra-cookie-cat-desc,
+html.astra-contrast .astra-switch-note {
+  color: var(--astra-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .astra-cookie,
+  .astra-switch-track,
+  .astra-switch-track::after {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .astra-switch-track {
+    border-color: ButtonText;
+  }
+
+  .astra-switch-track::after {
+    background: ButtonText;
+  }
+
+  .astra-switch input:checked + .astra-switch-track {
+    background: Highlight;
+    border-color: Highlight;
+  }
+}
+
+@media (max-width: 768px) {
+  .astra-cookie {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 70vh;
+    max-height: 70dvh;
+    padding: 1rem calc(1rem + env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom))
+      calc(1rem + env(safe-area-inset-left));
+    border-width: 1px 0 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .astra-cookie-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .astra-cookie-text {
+    flex: none;
+  }
+
+  .astra-cookie-msg {
+    font-size: 0.9rem;
+  }
+
+  .astra-cookie-actions,
+  .astra-cookie-dialog-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .astra-cookie-btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  html.astra-cookie-open .astra-dock {
+    bottom: calc(var(--astra-cookie-h, 0px) + 0.75rem);
+  }
+
+  html.astra-cookie-open .astra-panel {
+    max-height: max(10rem, calc(100dvh - var(--astra-cookie-h, 0px) - 6.5rem));
+  }
+
+  .astra-cookie-modal {
+    padding: calc(0.75rem + env(safe-area-inset-top)) 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
+  }
+
+  .astra-cookie-dialog {
+    padding: 1rem 1rem 1.1rem;
+    border-radius: 18px;
+  }
 }
