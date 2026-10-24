@@ -8,7 +8,7 @@
 }
 
 html[data-theme="light"] {
-  --astra-bg: #f8f8f0;
+  --astra-bg: #ffffff;
   --astra-text: #101010;
   --astra-muted: rgba(16, 16, 16, 0.66);
   --astra-accent: #c03818;
@@ -2030,3 +2030,321 @@ html.astra-contrast .astra-switch-note {
     border-radius: 18px;
   }
 }
+
+/* === Content removals + techstack contrast (section cleanup task) === */
+/* Home: showreel video + awards strip */
+section.showreel,
+section.showreel + .border-padding,
+/* Home: 3Musafir client image in Featured Works carousel */
+.projects-carousel-item:has(img[src*="3musafir"]),
+/* Home: flower image-sequence section */
+section.flower,
+section.flower + .normal-padding,
+/* About: "The Experts" heading + team members */
+.about .about-content-top,
+.about .about-team,
+.about .about-team + .about-divider {
+  display: none !important;
+}
+
+/* Home: "Maximizing Results" techstack card stays dark in both themes */
+.techstack-item-big.techstack-item-no-padding,
+html[data-theme="light"] .techstack-item-big.techstack-item-no-padding {
+  background: #0d0d0d !important;
+}
+.techstack-item-big .techstack-item-content-video {
+  filter: brightness(1.9) contrast(1.15);
+}
+.techstack-item-big .techstack-item-content-center .small-subheadline,
+html[data-theme="light"] .techstack-item-big .techstack-item-content-center .small-subheadline {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+}
+.techstack-item-big .techstack-item-content-center .button,
+html[data-theme="light"] .techstack-item-big .techstack-item-content-center .button {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  opacity: 1 !important;
+}
+.techstack-item-big .techstack-item-content-center .button .small-description,
+html[data-theme="light"] .techstack-item-big .techstack-item-content-center .button .small-description {
+  color: #ffffff !important;
+}
+/* === End content removals block === */
+
+/* HIDDEN: Featured Works section — delete this rule to show it again */
+section.projects.projects-desktop,
+section.projects.projects-mobile,
+section.projects.projects-mobile + .normal-padding {
+  display: none !important;
+}
+
+/* === AstraeLink brand refresh: nav font, white light mode, software bar, a11y icon, process steps === */
+@font-face {
+  font-family: "Comfortaa";
+  src: url("/fonts/Comfortaa.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Nav: larger links in the logo's rounded geometric lettering */
+.navigation-inside-big a,
+.navigation-inside-big a.small-description,
+.navigation-inside-right .button .small-description,
+.navigation-inside-right .button-content span,
+.navigation-mobile-menu a {
+  font-family: "Comfortaa", "SF PRO DISPLAY 600", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (min-width: 769px) {
+  .navigation-inside-big {
+    gap: 1.9rem !important;
+  }
+
+  .navigation-inside-big a,
+  .navigation-inside-big a.small-description {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+  }
+
+  .navigation-inside-right .button .small-description,
+  .navigation-inside-right .button-content span {
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Light mode: pure white page, cards separated by soft gray borders */
+html[data-theme="light"] .navigation-inside {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(16, 16, 16, 0.1) !important;
+  box-shadow: 0 6px 24px rgba(16, 16, 16, 0.06);
+}
+
+html[data-theme="light"] .navigation-wrapper.is-open .navigation-mobile-menu,
+html[data-theme="light"] body.menu-open .navigation-mobile-menu {
+  background: #ffffff !important;
+}
+
+html[data-theme="light"] .showreel-content-row-item,
+html[data-theme="light"] .testimonials-item,
+html[data-theme="light"] .testimonials-item-last,
+html[data-theme="light"] .kpi-content-item,
+html[data-theme="light"] .techstack-item-small,
+html[data-theme="light"] .casestudies-item,
+html[data-theme="light"] .contact-content-top-item,
+html[data-theme="light"] .contact-content-item,
+html[data-theme="light"] .contact-content-small-item,
+html[data-theme="light"] .plan-card,
+html[data-theme="light"] .audit-step,
+html[data-theme="light"] .chart-wrap {
+  border: 1px solid #e4e4e7 !important;
+  box-shadow: 0 1px 2px rgba(16, 16, 16, 0.04), 0 8px 24px rgba(16, 16, 16, 0.05) !important;
+}
+
+/* Software bar (hero marquee) */
+.hero-content-bottom-row .rfm-overlay {
+  --gradient-color: var(--astra-bg, #101010) !important;
+}
+
+html[data-theme="light"] .hero-content-bottom-row .rfm-overlay {
+  --gradient-color: #ffffff !important;
+}
+
+.hero-content-bottom-item {
+  opacity: 0.9 !important;
+}
+
+html[data-theme="dark"] .hero-content-bottom-item {
+  background-color: #1a1a1a !important;
+  box-shadow: inset 0 0 0 1px rgba(240, 240, 232, 0.18) !important;
+}
+
+html[data-theme="light"] .hero-content-bottom-item {
+  opacity: 1 !important;
+  background: #ffffff !important;
+  box-shadow: inset 0 0 0 1px #d4d4d8, 0 1px 3px rgba(16, 16, 16, 0.06) !important;
+}
+
+html[data-theme="light"] .hero-content-bottom-image {
+  filter: invert(1) brightness(0.12) !important;
+}
+
+/* Accessibility button: universal access figure */
+.astra-fab-accent svg.astra-a11y-figure {
+  width: 2.15rem !important;
+  height: 2.15rem !important;
+  stroke-width: 2.3;
+}
+
+@media (max-width: 768px) {
+  .astra-fab-accent svg.astra-a11y-figure {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+  }
+}
+
+.astra-fab-accent svg.astra-a11y-figure circle {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Process steps (replaces the services video) */
+.services-content-container:has(.astra-steps) .services-content-video {
+  display: none !important;
+}
+
+.services-content-container:has(.astra-steps) {
+  border-radius: 25px;
+}
+
+.astra-steps {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 5vw, 5rem);
+  border-radius: 25px;
+  background: #050505;
+  border: 1px solid rgba(240, 240, 232, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --step-ink: #f0f0e8;
+  --step-line: rgba(240, 240, 232, 0.4);
+  --step-card: #141414;
+  --step-border: rgba(240, 240, 232, 0.16);
+}
+
+html[data-theme="light"] .astra-steps {
+  background: #f4f4f5;
+  border-color: #e4e4e7;
+  --step-ink: #101010;
+  --step-line: rgba(16, 16, 16, 0.55);
+  --step-card: #ffffff;
+  --step-border: #d4d4d8;
+}
+
+.astra-steps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.75rem, 2vw, 2rem);
+}
+
+.astra-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.4rem 0.75rem 1.1rem;
+  border-radius: 18px;
+  background: var(--step-card);
+  border: 1px solid var(--step-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.astra-step-icon {
+  width: clamp(3rem, 4.6vw, 4.25rem);
+  height: clamp(3rem, 4.6vw, 4.25rem);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(248, 80, 48, 0.12);
+  color: var(--step-ink);
+}
+
+.astra-step-icon svg {
+  width: 62%;
+  height: 62%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.astra-step-icon .astra-step-accent {
+  stroke: #f85030;
+}
+
+html[data-theme="light"] .astra-step-icon .astra-step-accent {
+  stroke: #c03818;
+}
+
+.astra-step-label {
+  color: var(--step-ink);
+  font-family: "SF PRO DISPLAY 600", sans-serif;
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+  line-height: 1.25;
+}
+
+.astra-steps-lines {
+  display: block;
+  width: 75%;
+  height: clamp(3rem, 6vw, 5rem);
+  overflow: visible;
+}
+
+.astra-steps-lines path {
+  fill: none;
+  stroke: var(--step-line);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.astra-steps-site {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.4rem 0.75rem 0.8rem;
+  border-radius: 999px;
+  background: var(--step-card);
+  border: 1px solid var(--step-border);
+  color: var(--step-ink);
+  font-family: "SF PRO DISPLAY 600", sans-serif;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+}
+
+.astra-steps-plus {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #8b8cf8;
+  color: #101010;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .astra-steps-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .astra-steps-lines {
+    width: 2px;
+    height: 2rem;
+  }
+
+  .astra-steps-lines path {
+    display: none;
+  }
+
+  .astra-steps-lines {
+    background: var(--step-line);
+    margin-top: 1rem;
+  }
+}
+/* === End AstraeLink brand refresh block === */

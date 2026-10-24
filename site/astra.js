@@ -29,7 +29,7 @@
       var current = img.getAttribute("src") || "";
       if (current.indexOf("infinitivee") === -1 && current.indexOf("astraea-logo") === -1) return;
       if (current !== src) img.setAttribute("src", src);
-      img.alt = "Astraea Labs";
+      img.alt = "AstraeLink";
       img.classList.add("astraea-logo");
     });
   }
@@ -77,6 +77,52 @@
   setInterval(function () {
     if (themeSource() === "auto") applyTheme("auto");
   }, 60000);
+
+  var STEP_ICONS = {
+    audit: '<circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.4 15.4 5.6 5.6"></path><path class="astra-step-accent" d="m7.6 10.6 2 2 3.6-4"></path>',
+    road: '<path d="M8 21 10.6 3M16 21 13.4 3"></path><path class="astra-step-accent" d="M12 5.5v2M12 10.5v2.5M12 16v3"></path><path d="M3 21h18"></path>',
+    fix: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
+    monitor: '<rect x="2.5" y="3.5" width="19" height="13" rx="2"></rect><path d="M8 20.5h8M12 16.5v4"></path><path class="astra-step-accent" d="M5.5 10.5h3l1.6-3 3 6 1.6-3h3.8"></path>'
+  };
+
+  function stepsHtml() {
+    var steps = [
+      ["audit", "WCAG Audit"],
+      ["road", "Roadmap"],
+      ["fix", "Fixes"],
+      ["monitor", "Ongoing Monitoring"]
+    ];
+    return (
+      '<ol class="astra-steps-list">' +
+      steps.map(function (s) {
+        return (
+          '<li class="astra-step"><span class="astra-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+          STEP_ICONS[s[0]] + '</svg></span><span class="astra-step-label">' + s[1] + "</span></li>"
+        );
+      }).join("") +
+      "</ol>" +
+      '<svg class="astra-steps-lines" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">' +
+      '<path d="M125 0V50L165 100H835L875 50V0M375 0V50L415 100M625 0V50L585 100M500 100V120"></path></svg>' +
+      '<div class="astra-steps-site"><span class="astra-steps-plus" aria-hidden="true">+</span>Your website</div>'
+    );
+  }
+
+  function mountSteps() {
+    var box = document.querySelector(".services-content-container");
+    if (!box || box.querySelector(".astra-steps")) return;
+    if (window.__next_f && !Object.keys(box).some(function (k) { return k.indexOf("__reactFiber") === 0; })) return;
+    var wrap = document.createElement("div");
+    wrap.className = "astra-steps";
+    wrap.setAttribute("role", "group");
+    wrap.setAttribute("aria-label", "Our process: WCAG audit, roadmap, fixes, ongoing monitoring for your website");
+    wrap.innerHTML = stepsHtml();
+    box.appendChild(wrap);
+    var video = box.querySelector(".services-content-video");
+    if (video) video.pause();
+  }
+
+  [600, 1500, 3000, 6000].forEach(function (ms) { setTimeout(mountSteps, ms); });
+  setInterval(mountSteps, 2500);
 
   var defaults = {
     font: 0,
@@ -154,7 +200,9 @@
       icon("M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z") +
       "</button>" +
       '<button type="button" class="astra-fab astra-fab-accent" id="astra-open" aria-expanded="false" aria-controls="astra-panel" aria-label="Accessibility options">' +
-      icon("M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM4 9h16M12 6v14M7 20l5-6 5 6") +
+      '<svg class="astra-a11y-figure" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+      '<circle cx="12" cy="4.2" r="2.2"></circle>' +
+      '<path d="M4.5 8.6 12 10l7.5-1.4M12 10v4.6M12 14.6 8.6 21M12 14.6l3.4 6.4"></path></svg>' +
       "</button>" +
       '<div id="astra-panel" class="astra-panel" role="dialog" aria-modal="true" aria-labelledby="astra-panel-title" hidden>' +
       '<div class="astra-panel-head"><div><p class="astra-kicker">Accessibility</p><h2 id="astra-panel-title">Adjust this site</h2></div>' +
@@ -379,7 +427,7 @@
   function mailtoBooking(data) {
     var subject = "Video Call Booking Request from " + data.name;
     var body =
-      "Hello Astraealink Team,\n\nI would like to book a video call with the following details:\n\nName: " +
+      "Hello AstraeLink Team,\n\nI would like to book a video call with the following details:\n\nName: " +
       data.name +
       "\nEmail: " +
       data.email +
