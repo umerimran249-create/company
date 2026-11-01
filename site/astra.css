@@ -362,7 +362,34 @@ body.static-page section.page-block {
 .plan-note {
   margin: 0;
   color: var(--astra-muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.plan-card-wide {
+  width: min(1120px, 100%);
+  margin: 1.5rem auto 0;
+  box-sizing: border-box;
+}
+
+.plan-scope {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  margin-top: 0.4rem;
+}
+
+.plan-scope-title {
+  margin: 0 0 0.55rem;
+  color: var(--astra-text);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .plan-scope {
+    grid-template-columns: 1fr;
+  }
 }
 
 html:has(body.static-page),
@@ -2146,6 +2173,45 @@ html[data-theme="light"] .audit-step,
 html[data-theme="light"] .chart-wrap {
   border: 1px solid #e4e4e7 !important;
   box-shadow: 0 1px 2px rgba(16, 16, 16, 0.04), 0 8px 24px rgba(16, 16, 16, 0.05) !important;
+}
+
+/* Hide Works in nav, footer, and the homepage projects block */
+a[href="/works/"],
+a[href^="/works/"],
+.footer-column-contents-item:has(a[href="/works/"]),
+.projects,
+.projects-desktop,
+.projects-mobile {
+  display: none !important;
+}
+
+/* Clip sideways overflow without turning the page into a stuck scroll box */
+html {
+  overflow-x: clip;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.chart-wrap::-webkit-scrollbar,
+.hero-content-bottom::-webkit-scrollbar,
+.hero-content-bottom-row::-webkit-scrollbar,
+.rfm-marquee-container::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none;
+}
+
+.hero-content-bottom,
+.hero-content-bottom-row,
+.rfm-marquee-container,
+.testimonials,
+.testimonials + .normal-padding {
+  display: none !important;
+}
+
+.chart-wrap {
+  scrollbar-width: none;
 }
 
 /* Software bar (hero marquee) */

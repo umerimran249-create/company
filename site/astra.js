@@ -1,4 +1,9 @@
 (function () {
+  if (/^\/works(\/|$)/.test(location.pathname)) {
+    location.replace("/");
+    return;
+  }
+
   var THEME_KEY = "astra-theme";
   var A11Y_KEY = "astra-a11y";
   var DAY_START = 7;
@@ -359,7 +364,7 @@
     return (
       '<form id="request-meeting" class="meeting-form" novalidate>' +
       '<p class="meeting-kicker">Meeting</p>' +
-      '<h2 class="meeting-title">Book a video call</h2>' +
+      '<h2 class="meeting-title">Book a meeting</h2>' +
       '<p class="meeting-lead" id="meeting-status" role="status">Pick a date and time. We confirm by email.</p>' +
       '<div class="form-group"><label class="form-label" for="meeting-name">Full name</label>' +
       '<input class="form-input" id="meeting-name" name="name" type="text" autocomplete="name" required aria-describedby="meeting-name-error">' +
@@ -382,7 +387,7 @@
       '<p class="meeting-error" id="meeting-time-error" hidden></p></div></div>' +
       '<div class="form-group"><label class="form-label" for="meeting-notes">Notes</label>' +
       '<textarea class="form-textarea" id="meeting-notes" name="notes" rows="4" placeholder="Tell us about your project or what you want to cover."></textarea></div>' +
-      '<div class="form-actions"><button type="submit" class="btn-primary" id="meeting-submit">Book video call</button></div>' +
+      '<div class="form-actions"><button type="submit" class="btn-primary" id="meeting-submit">Book meeting</button></div>' +
       "</form>"
     );
   }
@@ -427,7 +432,7 @@
   function mailtoBooking(data) {
     var subject = "Video Call Booking Request from " + data.name;
     var body =
-      "Hello AstraeLink Team,\n\nI would like to book a video call with the following details:\n\nName: " +
+      "Hello AstraeLink Team,\n\nI would like to book a meeting with the following details:\n\nName: " +
       data.name +
       "\nEmail: " +
       data.email +
@@ -504,7 +509,7 @@
       .then(function () {
         if (button) {
           button.disabled = false;
-          button.textContent = "Book video call";
+          button.textContent = "Book meeting";
         }
       });
   }

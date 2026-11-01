@@ -53,7 +53,7 @@
         if (data.message && data.message.length > 5000) errors["meeting-notes"] = "Notes must be 5000 characters or fewer";
         return errors;
       },
-      idleLabel: "Book video call",
+      idleLabel: "Book meeting",
       busyLabel: "Sending...",
       success: function (data) {
         return "Request received. We'll contact you at " + data.email + " to confirm the meeting.";
