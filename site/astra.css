@@ -355,8 +355,18 @@ body.static-page section.page-block {
 }
 
 .plan-price,
-.plan-price-row {
-  display: none !important;
+.plan-price span,
+.chart tr.plan-price-row td:not(:first-child) {
+  color: var(--astra-accent) !important;
+}
+
+.chart td.mark {
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.chart td.mark-no {
+  color: var(--astra-muted);
 }
 
 .plan-note {
@@ -364,6 +374,45 @@ body.static-page section.page-block {
   color: var(--astra-muted);
   font-size: 0.95rem;
   line-height: 1.45;
+}
+
+.chart caption {
+  caption-side: top;
+  text-align: left;
+  padding: 1rem 1.15rem 0.35rem;
+}
+
+.chart tr.chart-gap td {
+  height: 1.15rem;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.chart tr.chart-gap-lg td {
+  height: 2.4rem;
+}
+
+.chart tr.chart-group td {
+  color: var(--astra-text, #fff);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.03);
+  padding-top: 1rem;
+  padding-bottom: 0.85rem;
+}
+
+.chart tr.chart-group-main td {
+  color: var(--astra-accent) !important;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  background: transparent !important;
+  border-bottom: 0 !important;
+  padding-top: 0.15rem;
+  padding-bottom: 0.35rem;
 }
 
 .plan-card-wide {
