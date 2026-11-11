@@ -1961,8 +1961,7 @@ html.astra-cookie-open .astra-panel {
   color: inherit;
   font: inherit;
   text-align: left;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -2416,3 +2415,53 @@ html[data-theme="light"] .astra-step-icon .astra-step-accent {
   }
 }
 /* === End AstraeLink brand refresh block === */
+
+/* Long-form legal article. Scoped so the rest of the site keeps its type scale. */
+body.static-page .legal-article {
+  max-width: 46rem;
+}
+
+body.static-page .legal-article h2 {
+  margin: 1.8rem 0 0.45rem;
+  color: var(--astra-text);
+  font-family: "SF PRO DISPLAY 600", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+body.static-page .legal-article p.description {
+  line-height: 1.65;
+  margin: 0 0 0.35rem;
+}
+
+body.static-page .legal-article .legal-effective {
+  margin-bottom: 0.25rem;
+}
+
+body.static-page .legal-article a {
+  color: var(--astra-text);
+}
+
+body.static-page .legal-article .legal-providers {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.85rem 0 1rem;
+}
+
+body.static-page .legal-article .legal-providers th,
+body.static-page .legal-article .legal-providers td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.85rem 0.6rem 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+  color: var(--astra-muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+body.static-page .legal-article .legal-providers th {
+  color: var(--astra-text);
+  font-weight: 600;
+}

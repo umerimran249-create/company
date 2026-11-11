@@ -888,7 +888,7 @@
     var item = document.createElement("div");
     item.className = "footer-column-contents-item";
     item.innerHTML =
-      '<p class="description grey hover-text-grey"><button type="button" class="astra-cookie-footer-link" data-cookie-action="manage" aria-haspopup="dialog">Cookie settings</button></p>';
+      '<p class="description grey"><button type="button" class="astra-cookie-footer-link" data-cookie-action="manage" aria-haspopup="dialog">Cookie settings</button></p>';
     if (target) {
       target.appendChild(item);
     } else {
