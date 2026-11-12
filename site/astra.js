@@ -339,7 +339,7 @@
     if (loaderArmed) return;
     if (!document.querySelector(loaderSel)) return;
     loaderArmed = true;
-    setTimeout(finishLoaders, 1600);
+    setTimeout(finishLoaders, 3900);
   }
 
   armLoaders();
