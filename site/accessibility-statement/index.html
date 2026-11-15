@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0f">
+<title>Accessibility Statement | Astraea Link</title>
+<meta name="description" content="Accessibility Statement and WCAG 2.2 audit report for astraealink.com: current status, how we tested, results by criterion and how to contact us.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/_next/static/css/c3f8eed6a959fb5a.css">
+<link rel="stylesheet" href="/astra.css?v=8">
+<link rel="stylesheet" href="/css/adjust.css?v=3">
+<script>(function(){var s=localStorage.getItem("astra-theme");var h=new Date().getHours();var day=h>=7&&h<19;var mode=s==="light"||s==="dark"?s:(day?"light":"dark");document.documentElement.setAttribute("data-theme",mode);document.documentElement.classList.toggle("light",mode==="light");document.documentElement.setAttribute("data-theme-source",s||"auto");var fix=function(img){var cur=img.getAttribute("src")||"";if(cur.indexOf("astraea-logo")===-1)return;var logo=document.documentElement.getAttribute("data-theme")==="light"?"/logos/astraea-logo.png":"/logos/astraea-logo-on-dark.png";if(cur!==logo)img.setAttribute("src",logo);};new MutationObserver(function(){document.querySelectorAll("img").forEach(fix);}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:["src","data-theme"]});document.querySelectorAll("img").forEach(fix);})();</script>
+<style>
+.a11y-skip{position:fixed;left:1rem;top:-5rem;z-index:1000;background:#f85030;color:#101010;padding:.65rem 1rem;border-radius:8px;font-weight:600;text-decoration:none}
+.a11y-skip:focus{top:1rem;outline:3px solid #f0f0e8;outline-offset:2px}
+html[data-theme="light"] .a11y-skip{background:#c03818;color:#fff}
+html[data-theme="light"] .a11y-skip:focus{outline-color:#101010}
+.a11y-statement h3{font-size:1.0625rem;margin:1.5rem 0 .5rem;color:var(--text)}
+.a11y-statement .ar-status{background:var(--callout-bg);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:1.1rem 1.25rem;margin:0 0 1.25rem}
+.a11y-statement .ar-status p{margin:.25rem 0 0}
+.a11y-statement .ar-status-kicker{font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.a11y-statement .ar-status-value{font-size:1.25rem;font-weight:700;color:var(--text)}
+.a11y-statement .ar-stats{list-style:none;padding:0;margin:1rem 0 1.25rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.a11y-statement .ar-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;display:flex;flex-direction:column;gap:.25rem;margin:0}
+.a11y-statement .ar-stat-n{font-size:2rem;line-height:1.1;font-weight:700;color:var(--accent)}
+.a11y-statement .ar-stat-l{color:var(--muted);font-size:.9375rem}
+.a11y-statement .ar-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin:0 0 1rem}
+.a11y-statement .ar-facts div{border-top:1px solid var(--border);padding-top:.5rem}
+.a11y-statement .ar-facts dt{font-size:.8125rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.a11y-statement .ar-facts dd{margin:.15rem 0 0;color:var(--text);font-weight:600}
+.a11y-statement .ar-pages{columns:2;column-gap:24px}
+.a11y-statement .ar-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);margin:1rem 0}
+.a11y-statement .ar-table-wrap:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.a11y-statement .ar-table{width:100%;min-width:640px;border-collapse:collapse;font-size:.9375rem}
+.a11y-statement .ar-table caption{text-align:left;padding:.85rem 1rem;font-weight:600;color:var(--text);background:var(--surface)}
+.a11y-statement .ar-table th,.a11y-statement .ar-table td{text-align:left;vertical-align:top;padding:.7rem 1rem;border-top:1px solid var(--border)}
+.a11y-statement .ar-table thead th{font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface)}
+.a11y-statement .ar-table tbody th{font-weight:600;color:var(--text);min-width:200px}
+.a11y-statement .ar-table td{color:var(--text)}
+.a11y-statement .ar-table td:last-child{color:var(--muted)}
+.a11y-statement .ar-group{background:var(--surface-2);color:var(--text)!important;font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase}
+.a11y-statement .ar-cap-k{display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.a11y-statement .ar-num{display:inline-block;min-width:3.2em;color:var(--accent);font-variant-numeric:tabular-nums}
+.a11y-statement .ar-res{display:inline-flex;align-items:center;gap:.35rem;font-weight:600;white-space:nowrap;border-radius:999px;padding:.15rem .6rem;border:1px solid currentColor}
+.a11y-statement .ar-met{color:#7ee2a8}
+.a11y-statement .ar-na{color:var(--muted)}
+html[data-theme="light"] .a11y-statement .ar-met{color:#146c3a}
+.a11y-statement .ar-ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:900px){.a11y-statement .ar-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.a11y-statement .ar-facts{grid-template-columns:1fr}.a11y-statement .ar-pages{columns:1}}
+@media print{.hdr,.sf,.toc,.a11y-skip,.astra-cookie,#astra-panel{display:none!important}.a11y-statement{padding-top:0!important}.a11y-statement .layout{display:block}.a11y-statement .ar-table-wrap{overflow:visible}}
+</style>
+</head>
+<body id="top" tabindex="-1" class="static-page">
+<a class="a11y-skip" href="#main-content">Skip to main content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></symbol><symbol id="i-adjust" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"></path><circle cx="16" cy="6" r="2"></circle><circle cx="10" cy="12" r="2"></circle><circle cx="18" cy="18" r="2"></circle></symbol></defs></svg>
+<header class="hdr"><div class="wrap"><a class="brand" href="/" aria-label="Astraea Link home"><img class="brand-logo astraea-logo" src="/logos/astraea-logo.png" alt=""></a><nav class="navw" aria-label="Main"><ul class="nav"><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/plans/">Plans</a></li></ul></nav><div class="hb"><button class="ib" type="button" id="tt" aria-label="Switch to dark theme" title="Switch to dark theme" data-astra-theme="1"><svg class="i" aria-hidden="true"><use href="#i-moon"></use></svg></button><button class="ib" type="button" id="adjust-site" aria-expanded="false" aria-controls="astra-panel"><svg class="i" aria-hidden="true"><use href="#i-adjust"></use></svg><span class="lbtxt">Adjust This Site</span></button><a class="cta" href="/contact/">Book a Free Call</a></div></div></header>
+
+<main class="terms-page a11y-statement" id="main-content" tabindex="-1">
+  <div class="hero">
+    <p class="eyebrow">Legal</p>
+    <h1>Accessibility Statement</h1>
+    <p class="meta">Last updated: <time datetime="2026-11-15">November 15, 2026</time></p>
+    <p class="lede">Where this site stands on accessibility, how we tested it, and how to get help.</p>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-labelledby="toc-heading">
+      <details id="toc-details" open>
+        <summary id="toc-heading">On this page <span class="toc-count">(8 sections)</span></summary>
+        <ol>
+          <li><a href="#short-version">The short version</a></li>
+          <li><a href="#status">1. Status</a></li>
+          <li><a href="#report">2. Audit summary</a></li>
+          <li><a href="#method">3. Scope and method</a></li>
+          <li><a href="#results">4. Results by criterion</a></li>
+          <li><a href="#adjust-panel">5. Adjust This Site panel</a></li>
+          <li><a href="#help">6. Get help or report a barrier</a></li>
+          <li><a href="#legal-note">7. Legal note</a></li>
+        </ol>
+      </details>
+    </nav>
+
+    <div class="content">
+      <section class="summary" id="short-version" aria-labelledby="short-version-heading">
+        <h2 id="short-version-heading">The short version</h2>
+        <ul>
+          <li>This site is <strong>partially compliant</strong> with WCAG 2.2 Level AA. The remaining items are being fixed now.</li>
+          <li>We tested every public page by hand and with automated tools.</li>
+          <li>If anything gets in your way, email <a href="mailto:info@astraealink.com?subject=Accessibility%20issue%20on%20astraealink.com">info@astraealink.com</a> and we&rsquo;ll help.</li>
+        </ul>
+      </section>
+
+      <section class="terms-section" id="status" aria-labelledby="h-1">
+        <h2 id="h-1"><span class="num">1.</span>Status</h2>
+        <div class="ar-status" role="note" aria-labelledby="ar-status-label">
+          <p class="ar-status-kicker" id="ar-status-label">Current status</p>
+          <p class="ar-status-value">Partially compliant with WCAG 2.2 Level AA</p>
+          <p>In W3C terms, the site is &ldquo;partially conformant&rdquo;: some parts do not yet fully meet the standard.</p>
+        </div>
+        <p>We work to the <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a>, Level AA. Our November 15, 2026 audit found a small number of items still to fix. We are fixing them in the site&rsquo;s code and will publish updated results here after re-testing.</p>
+      </section>
+
+      <section class="terms-section" id="report" aria-labelledby="h-2">
+        <h2 id="h-2"><span class="num">2.</span>Audit summary</h2>
+        <ul class="ar-stats">
+          <li class="ar-stat"><span class="ar-stat-n">37</span><span class="ar-stat-l">Criteria met</span></li>
+          <li class="ar-stat"><span class="ar-stat-n">11</span><span class="ar-stat-l">Not applicable</span></li>
+          <li class="ar-stat"><span class="ar-stat-n">7</span><span class="ar-stat-l">Pages audited</span></li>
+          <li class="ar-stat"><span class="ar-stat-n">2</span><span class="ar-stat-l">Themes tested</span></li>
+        </ul>
+        <dl class="ar-facts">
+          <div><dt>Standard</dt><dd>WCAG 2.2, Levels A and AA</dd></div>
+          <div><dt>Audit date</dt><dd>November 15, 2026</dd></div>
+          <div><dt>Evaluated by</dt><dd>Astraea Link (self-evaluation)</dd></div>
+          <div><dt>Next update</dt><dd>After re-testing the remaining items</dd></div>
+        </dl>
+        <p>To view our report , Click on here <a href="/docs/astraea-link-wcag-2-2-audit-report.pdf" target="_blank" rel="noopener">Accessibility Audit Report (PDF)</a>.</p>
+      </section>
+
+      <section class="terms-section" id="method" aria-labelledby="h-3">
+        <h2 id="h-3"><span class="num">3.</span>Scope and method</h2>
+        <p><strong>Pages:</strong> <a href="/">Home</a>, <a href="/about/">About</a>, <a href="/plans/">Plans</a>, <a href="/contact/">Contact</a>, <a href="/terms/">Terms of Use</a>, <a href="/privacy/">Privacy Policy</a> and <a href="/cookies/">Cookies Policy</a>, in dark and light themes, on desktop and mobile widths.</p>
+        <p><strong>By hand:</strong> keyboard-only use, screen reader structure, 200% zoom and 320-pixel reflow, text spacing, reduced motion, form errors and color contrast.</p>
+        <p><strong>Tools:</strong> <a href="https://wave.webaim.org/">WAVE</a>, axe-core and HTML_CodeSniffer, with every flagged item checked by hand.</p>
+      </section>
+
+      <section class="terms-section" id="results" aria-labelledby="h-4">
+        <h2 id="h-4"><span class="num">4.</span>Results by criterion</h2>
+        <p>&ldquo;Met&rdquo; means the criterion passed on every page tested. &ldquo;Not applicable&rdquo; means the site has no content of that kind.</p>
+<div class="ar-table-wrap" role="region" aria-labelledby="ar-cap-1" tabindex="0">
+  <table class="ar-table">
+    <caption id="ar-cap-1"><span class="ar-cap-k">Principle 1</span> Perceivable</caption>
+    <thead><tr><th scope="col">Success criterion</th><th scope="col">Level</th><th scope="col">Result</th><th scope="col">Notes</th></tr></thead>
+    <tbody>
+<tr><th scope="row"><span class="ar-num">1.1.1</span> Non-text Content</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Images have text alternatives; decorative ones are hidden.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.2.1</span> Audio-only and Video-only (Prerecorded)</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No audio or video.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.2.2</span> Captions (Prerecorded)</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No video.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.2.3</span> Audio Description or Media Alternative (Prerecorded)</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No video. The home page animation has a text version.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.2.4</span> Captions (Live)</th><td>AA</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No live media.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.2.5</span> Audio Description (Prerecorded)</th><td>AA</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No video.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.3.2</span> Meaningful Sequence</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Reading order matches visual order.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.3.3</span> Sensory Characteristics</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No instructions rely on shape, position or sound.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.3.4</span> Orientation</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Works in portrait and landscape.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.3.5</span> Identify Input Purpose</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Name and email fields support autofill.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.1</span> Use of Color</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Links are underlined; status uses words and icons.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.2</span> Audio Control</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No audio.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.4</span> Resize Text</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Readable and usable at 200% text size.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.5</span> Images of Text</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>All text is real text.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.10</span> Reflow</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Usable at 320 pixels wide without sideways scrolling.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.12</span> Text Spacing</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No text cut off with increased spacing.</td></tr>
+<tr><th scope="row"><span class="ar-num">1.4.13</span> Content on Hover or Focus</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No custom pop-ups on hover or focus.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="ar-table-wrap" role="region" aria-labelledby="ar-cap-2" tabindex="0">
+  <table class="ar-table">
+    <caption id="ar-cap-2"><span class="ar-cap-k">Principle 2</span> Operable</caption>
+    <thead><tr><th scope="col">Success criterion</th><th scope="col">Level</th><th scope="col">Result</th><th scope="col">Notes</th></tr></thead>
+    <tbody>
+<tr><th scope="row"><span class="ar-num">2.1.1</span> Keyboard</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Everything works with a keyboard alone.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.1.2</span> No Keyboard Trap</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Focus never gets stuck; dialogs close with Escape.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.1.4</span> Character Key Shortcuts</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No single-key shortcuts.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.2.1</span> Timing Adjustable</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No time limits.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.2.2</span> Pause, Stop, Hide</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Animations can be paused and respect reduced motion.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.3.1</span> Three Flashes or Below Threshold</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Nothing flashes.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.4.1</span> Bypass Blocks</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Landmarks and headings let users skip repeated content.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.4.2</span> Page Titled</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Every page has a descriptive title.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.4.3</span> Focus Order</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Tab order follows reading order.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.4.4</span> Link Purpose (In Context)</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Link text makes the destination clear.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.4.5</span> Multiple Ways</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Pages are reachable from the header and footer.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.5.1</span> Pointer Gestures</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No complex gestures needed.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.5.2</span> Pointer Cancellation</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Controls act on release.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.5.4</span> Motion Actuation</th><td>A</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No motion-triggered actions.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.5.7</span> Dragging Movements</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No dragging needed.</td></tr>
+<tr><th scope="row"><span class="ar-num">2.5.8</span> Target Size (Minimum)</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Buttons and links are at least 24 by 24 pixels.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="ar-table-wrap" role="region" aria-labelledby="ar-cap-3" tabindex="0">
+  <table class="ar-table">
+    <caption id="ar-cap-3"><span class="ar-cap-k">Principle 3</span> Understandable</caption>
+    <thead><tr><th scope="col">Success criterion</th><th scope="col">Level</th><th scope="col">Result</th><th scope="col">Notes</th></tr></thead>
+    <tbody>
+<tr><th scope="row"><span class="ar-num">3.1.1</span> Language of Page</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Pages are marked as English.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.1.2</span> Language of Parts</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No passages in other languages.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.2.1</span> On Focus</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Focus never triggers a change.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.2.2</span> On Input</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Form choices never submit on their own.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.2.3</span> Consistent Navigation</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Navigation is the same on every page.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.2.4</span> Consistent Identification</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Repeated controls use the same names.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.2.6</span> Consistent Help</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Contact options are in the same place on every page.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.3.1</span> Error Identification</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Form errors are described in text.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.3.2</span> Labels or Instructions</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Every field has a visible label.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.3.3</span> Error Suggestion</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Error messages say how to fix the problem.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.3.4</span> Error Prevention (Legal, Financial, Data)</th><td>AA</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No legal or financial transactions.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.3.7</span> Redundant Entry</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>No information is asked for twice.</td></tr>
+<tr><th scope="row"><span class="ar-num">3.3.8</span> Accessible Authentication (Minimum)</th><td>AA</td><td><span class="ar-res ar-na"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 12h12"/></svg>Not applicable</span></td><td>No sign-in on public pages.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="ar-table-wrap" role="region" aria-labelledby="ar-cap-4" tabindex="0">
+  <table class="ar-table">
+    <caption id="ar-cap-4"><span class="ar-cap-k">Principle 4</span> Robust</caption>
+    <thead><tr><th scope="col">Success criterion</th><th scope="col">Level</th><th scope="col">Result</th><th scope="col">Notes</th></tr></thead>
+    <tbody>
+<tr><th scope="row"><span class="ar-num">4.1.2</span> Name, Role, Value</th><td>A</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Controls expose their name, role and state.</td></tr>
+<tr><th scope="row"><span class="ar-num">4.1.3</span> Status Messages</th><td>AA</td><td><span class="ar-res ar-met"><svg class="ar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Met</span></td><td>Form messages are announced by screen readers.</td></tr>
+    </tbody>
+  </table>
+</div>
+      </section>
+
+      <section class="terms-section" id="adjust-panel" aria-labelledby="h-5">
+        <h2 id="h-5"><span class="num">5.</span>Adjust This Site panel</h2>
+        <p>The panel lets you change how this site looks and moves. It doesn&rsquo;t make a website accessible or compliant. That takes fixing the code, which is what we do. All results above were tested with the panel switched off.</p>
+      </section>
+
+      <section class="terms-section" id="help" aria-labelledby="h-6">
+        <h2 id="h-6"><span class="num">6.</span>Get help or report a barrier</h2>
+        <p>If you can&rsquo;t use any part of this site, or need information in another format, email <a href="mailto:info@astraealink.com?subject=Accessibility%20issue%20on%20astraealink.com">info@astraealink.com</a> or use our <a href="/contact/">contact page</a>. Tell us the page and what happened. We aim to reply within 2 business days, and we&rsquo;ll give you the information or complete your request another way while we fix the problem.</p>
+      </section>
+
+      <section class="terms-section" id="legal-note" aria-labelledby="h-7">
+        <h2 id="h-7"><span class="num">7.</span>Legal note</h2>
+        <p>The U.S. Department of Justice has not set a technical web standard for private businesses under the Americans with Disabilities Act, and refers to WCAG as helpful guidance. We use WCAG 2.2 Level AA as our standard. This statement describes a self-evaluation on the date shown; it is not legal advice or a guarantee of compliance with any law. See our <a href="/terms/">Terms of Use</a>, Section 4.</p>
+      </section>
+
+      <aside class="contact-card" aria-labelledby="contact-card-heading">
+        <h2 id="contact-card-heading">Found a barrier on this site?</h2>
+        <p>Email <a class="email" href="mailto:info@astraealink.com?subject=Accessibility%20issue%20on%20astraealink.com">info@astraealink.com</a> with the page and what happened, and we&rsquo;ll fix it.</p>
+        <a class="btn" href="/contact/">Get in Touch</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="sf"><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3L2 21h20zM12 10v4M12 17h.01"></path></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"></path></symbol></defs></svg><div class="wrap sf-grid"><div class="sf-brand"><a class="brand" href="/" aria-label="Astraea Link home"><img class="brand-logo astraea-logo" src="/logos/astraea-logo.png" alt=""></a><p class="sf-tag">Accessibility audits, code remediation and monitoring to WCAG 2.2.</p><a class="cta" href="/contact/">Book a Free Call</a></div><nav aria-labelledby="ft-co"><h2 class="sf-h" id="ft-co">Company</h2><ul class="sf-list"><li><a href="/">Home</a></li><li><a href="/plans/">Plans</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Book a Free Call</a></li></ul></nav><nav aria-labelledby="ft-legal"><h2 class="sf-h" id="ft-legal">Legal</h2><ul class="sf-list"><li><a href="/terms/">Terms of Use</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/cookies/">Cookies Policy</a></li><li><a href="/accessibility-statement/" aria-current="page">Accessibility Statement</a></li></ul></nav><div><h2 class="sf-h" id="ft-touch">Get in Touch</h2><ul class="sf-list" aria-labelledby="ft-touch"><li><a href="mailto:info@astraealink.com"><svg class="i" aria-hidden="true"><use href="#i-mail"></use></svg>info@astraealink.com</a></li><li><a href="mailto:info@astraealink.com?subject=Accessibility%20issue%20on%20astraealink.com"><svg class="i" aria-hidden="true"><use href="#i-alert"></use></svg>Report an Accessibility Issue</a></li><li class="sf-loc"><svg class="i" aria-hidden="true"><use href="#i-pin"></use></svg>Fillmore, California</li></ul></div></div><div class="wrap sf-bot"><p>© 2026 Astraea Link. All rights reserved.</p><a href="#top"><svg class="i" aria-hidden="true"><use href="#i-up"></use></svg>Back to Top</a></div></footer>
+<script>
+  (function () {
+    var d = document.getElementById('toc-details');
+    var mq = window.matchMedia ? window.matchMedia('(max-width: 900px)') : null;
+    if (d && mq) {
+      d.open = !mq.matches;
+      var onChange = function (e) { d.open = !e.matches; };
+      if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
+      d.addEventListener('click', function (e) { if (mq.matches && e.target.closest && e.target.closest('a')) d.open = false; });
+    }
+    var links = Array.prototype.slice.call(document.querySelectorAll('.terms-page .toc a'));
+    if ('IntersectionObserver' in window && links.length) {
+      var map = {};
+      links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && map[e.target.id]) {
+            links.forEach(function (a) { a.removeAttribute('aria-current'); });
+            map[e.target.id].setAttribute('aria-current', 'true');
+          }
+        });
+      }, { rootMargin: '-90px 0px -70% 0px' });
+      Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+    }
+  })();
+</script>
+<script src="/astra.js?v=7"></script>
+</body>
+</html>
