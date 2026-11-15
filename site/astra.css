@@ -2280,11 +2280,39 @@ a[href^="/works/"],
 /* Clip sideways overflow without turning the page into a stuck scroll box */
 html {
   overflow-x: clip;
-  scrollbar-width: none;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #8a8a82 #161616;
 }
-
+html[data-theme="light"],
+html.light {
+  scrollbar-color: #6b6b66 #ecece6;
+}
 html::-webkit-scrollbar,
-body::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+  display: block !important;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #161616;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #8a8a82;
+  border-radius: 999px;
+  border: 3px solid #161616;
+}
+html[data-theme="light"]::-webkit-scrollbar-track,
+html.light::-webkit-scrollbar-track {
+  background: #ecece6;
+}
+html[data-theme="light"]::-webkit-scrollbar-thumb,
+html.light::-webkit-scrollbar-thumb {
+  background: #6b6b66;
+  border-color: #ecece6;
+}
 .chart-wrap::-webkit-scrollbar,
 .hero-content-bottom::-webkit-scrollbar,
 .hero-content-bottom-row::-webkit-scrollbar,
@@ -2761,7 +2789,10 @@ body.static-page .terms-page section {
 .terms-page .eyebrow { display: inline-block; font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
 .terms-page h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 14px; color: var(--text); font-weight: 700; }
 .terms-page .meta { color: var(--muted); margin: 0; }
-.terms-page .lede { color: var(--muted); max-width: 62ch; margin: 14px 0 0; font-size: 1.0625rem; }
+.terms-page .lede { color: var(--muted); max-width: none; margin: 14px 0 0; font-size: 1.0625rem; white-space: nowrap; }
+@media (max-width: 1040px) {
+  .terms-page .lede { white-space: normal; }
+}
 .terms-page .layout { max-width: var(--maxw); margin: 0 auto; padding: 16px 0 0; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 48px; align-items: start; }
 .terms-page .toc { position: sticky; top: 6.5rem; max-height: calc(100vh - 8rem); overflow: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 14px; }
 .terms-page .toc summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 8px; margin: -6px 0 4px; font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); cursor: pointer; border-radius: 8px; list-style: none; }

@@ -10,7 +10,13 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica N
 html.light body{--bg:#fafaf7;--bg2:#f1f0eb;--card:#ffffff;--stg:#f4f4f0;--tx:#101010;--sb:#3f3f46;--mu:#52525b;--ln:#d4d4d8;--ln2:#e4e4e7;--dash:#a1a1aa;--ac:#c03818;--on:#ffffff;
  --cb:#fee2e2;--ct:#991b1b;--sbg:#ffedd5;--stx:#9a3412;--mbg:#f4f4f5;--mtx:#3f3f46;--pb:#dcfce7;--ptx:#166534;--bad:#b91c1c;--badl:#dc2626;--good:#15803d;--goodl:#16a34a;
  --astra-text:#101010;--astra-accent:#c03818;--astra-bg:#fafaf7}
-html{scroll-padding-top:84px}
+html{scroll-padding-top:84px;overflow-x:clip;overflow-y:scroll;scrollbar-width:thin;scrollbar-color:#8a8a82 #161616}
+html.light{scrollbar-color:#6b6b66 #ecece6}
+html::-webkit-scrollbar,body::-webkit-scrollbar{width:12px;height:12px}
+html::-webkit-scrollbar-track,body::-webkit-scrollbar-track{background:#161616}
+html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{background:#8a8a82;border-radius:999px;border:3px solid #161616}
+html.light::-webkit-scrollbar-track{background:#ecece6}
+html.light::-webkit-scrollbar-thumb{background:#6b6b66;border-color:#ecece6}
 a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex="-1"]:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
 .i{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.125em}
 .i.fill{fill:currentColor;stroke:none}
