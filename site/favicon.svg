@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Infinity Symbol for Favicon -->
-  <path d="M4 16C4 12.6863 6.68629 10 10 10C13.3137 10 16 12.6863 16 16C16 19.3137 13.3137 22 10 22C6.68629 22 4 19.3137 4 16ZM16 16C16 12.6863 18.6863 10 22 10C25.3137 10 28 12.6863 28 16C28 19.3137 25.3137 22 22 22C18.6863 22 16 19.3137 16 16Z" fill="url(#gradient1)" stroke="url(#gradient2)" stroke-width="1.5"/>
-  
-  <!-- Gradient Definitions -->
-  <defs>
-    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
-      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
-    </linearGradient>
-  </defs>
-</svg> 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><style>.bg{fill:#0b0b0f}.m{fill:#f0f0e8}.a{stroke:#f85030}@media (prefers-color-scheme:light){.bg{fill:#fafaf7}.m{fill:#101010}.a{stroke:#c03818}}</style><rect class="bg" width="100" height="100" rx="22"/><g transform="translate(13.36 21.86) scale(0.3636)"><path class="a" d="M111.56 3.90A100 100 0 0 1 189.80 102.49" fill="none" stroke-width="16" stroke-linecap="round"/><g class="m"><path d="M82.23 42.32C102.45 46.48 112.15 63.83 105.59 83.06L126.78 70.99C106.90 66.82 96.93 49.62 103.68 30.11Z"/><path d="M50.57 84.18C54.09 104.53 42.46 118.70 22.16 119.62L41.14 134.94C37.76 114.91 49.15 100.54 69.78 99.68Z"/><path d="M98.42 151.37C111.87 135.69 125.90 135.44 139.85 150.83L139.49 125.58C125.99 141.37 111.96 141.51 98.06 126.22Z"/><circle cx="86" cy="24" r="18.7"/><circle cx="69" cy="81" r="18.7"/><circle cx="123" cy="89" r="18.4"/><circle cx="23" cy="138" r="18.4"/><circle cx="154" cy="138" r="19.1"/><circle cx="84" cy="139" r="19.0"/></g></g></svg>
