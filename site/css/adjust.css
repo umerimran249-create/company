@@ -1,0 +1,548 @@
+/* Adjust This Site: right-hand panel. Loaded on the homepage, which does not use astra.css. */
+:root {
+  --astra-text: #f0f0e8;
+  --astra-muted: rgba(240, 240, 232, 0.68);
+  --astra-accent: #f85030;
+  --astra-card: #161616;
+  --astra-line: rgba(240, 240, 232, 0.16);
+}
+html.light,
+html[data-theme="light"] {
+  --astra-text: #101010;
+  --astra-muted: rgba(16, 16, 16, 0.66);
+  --astra-accent: #c03818;
+  --astra-card: #ffffff;
+  --astra-line: rgba(16, 16, 16, 0.14);
+}
+html.astra-adjust-open { overflow: hidden; }
+
+.astra-panel-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10019;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+.astra-panel-backdrop[hidden] { display: none !important; }
+
+.astra-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10020;
+  width: min(24rem, 100vw);
+  height: 100dvh;
+  max-height: none;
+  overflow: auto;
+  box-sizing: border-box;
+  background: var(--astra-card);
+  color: var(--astra-text);
+  border-left: 1px solid var(--astra-line);
+  padding: 1.25rem 1.15rem 1.5rem;
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.astra-panel[hidden] { display: none !important; }
+.astra-panel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.astra-kicker { margin: 0 0 0.2rem; color: var(--astra-accent); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+.astra-panel h2 { margin: 0; font-size: 1.35rem; line-height: 1.15; color: var(--astra-text); }
+.astra-close, .astra-reset, .astra-group button, .astra-options button, .astra-cookie-panel-link { font: inherit; cursor: pointer; }
+.astra-close { width: 2.25rem; height: 2.25rem; flex: none; border-radius: 999px; border: 1px solid var(--astra-line); background: transparent; color: var(--astra-text); font-size: 1.3rem; line-height: 1; }
+.astra-note { margin: 0.9rem 0; color: var(--astra-muted); font-size: 0.9rem; line-height: 1.45; }
+.astra-group, .astra-options { display: grid; gap: 0.5rem; }
+.astra-group { grid-template-columns: repeat(3, 1fr); margin-bottom: 0.75rem; }
+.astra-options { grid-template-columns: 1fr; }
+.astra-group button, .astra-options button, .astra-reset, .astra-cookie-panel-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--astra-line);
+  background: transparent;
+  color: var(--astra-text);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  text-align: left;
+}
+.astra-group button.is-on, .astra-options button.is-on { background: var(--astra-accent); border-color: var(--astra-accent); color: #161616; }
+.astra-reset, .astra-cookie-panel-link { margin-top: 0.7rem; }
+.astra-panel :focus-visible { outline: 3px solid var(--astra-accent); outline-offset: 2px; }
+
+html.astra-font-1 { zoom: 1.08; }
+html.astra-font-2 { zoom: 1.16; }
+html.astra-font-3 { zoom: 1.24; }
+html.astra-readable body, html.astra-readable button, html.astra-readable p, html.astra-readable h1, html.astra-readable h2, html.astra-readable a { font-family: Verdana, Tahoma, sans-serif !important; }
+html.astra-links a { text-decoration: underline !important; text-underline-offset: 0.18em; outline: 2px solid #f85030; outline-offset: 2px; }
+html.astra-headings h1, html.astra-headings h2, html.astra-headings h3 { background: #f85030; color: #161616 !important; display: inline; box-decoration-break: clone; padding: 0 0.15em; }
+html.astra-contrast:not(.light) body,
+html.astra-contrast:not(.light) .hdr,
+html.astra-contrast:not(.light) main,
+html.astra-contrast:not(.light) section,
+html.astra-contrast:not(.light) .sf { background: #000 !important; color: #fff !important; }
+html.astra-contrast:not(.light) .hdr *,
+html.astra-contrast:not(.light) main *,
+html.astra-contrast:not(.light) .sf * { color: #fff !important; }
+html.astra-contrast.light body,
+html.astra-contrast.light .hdr,
+html.astra-contrast.light main,
+html.astra-contrast.light section,
+html.astra-contrast.light .sf,
+html.astra-contrast[data-theme="light"] body,
+html.astra-contrast[data-theme="light"] .hdr,
+html.astra-contrast[data-theme="light"] main,
+html.astra-contrast[data-theme="light"] section,
+html.astra-contrast[data-theme="light"] .sf { background: #fff !important; color: #000 !important; }
+html.astra-contrast.light .hdr *,
+html.astra-contrast.light main *,
+html.astra-contrast.light .sf *,
+html.astra-contrast[data-theme="light"] .hdr *,
+html.astra-contrast[data-theme="light"] main *,
+html.astra-contrast[data-theme="light"] .sf * { color: #000 !important; }
+html.astra-spacing p, html.astra-spacing h1, html.astra-spacing h2, html.astra-spacing a, html.astra-spacing button, html.astra-spacing li { letter-spacing: 0.08em !important; word-spacing: 0.16em !important; }
+html.astra-leading p, html.astra-leading li { line-height: 1.8 !important; }
+html.astra-motion *, html.astra-motion *::before, html.astra-motion *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+html.astra-cursor, html.astra-cursor * { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M6 4l16 12-7 1 4 8-4 2-4-8-5 5z' fill='%23dc4830' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") 4 2, auto !important; }
+.astra-guide-line { position: fixed; left: 0; right: 0; height: 8px; margin-top: -4px; background: rgba(220, 72, 48, 0.35); border-top: 2px solid #f85030; border-bottom: 2px solid #f85030; pointer-events: none; z-index: 9998; }
+
+/* ===== Cookie consent (banner, settings dialog, footer link) =====
+   Built by the cookie block at the end of astra.js. While the banner is up,
+   html gets .astra-cookie-open and --astra-cookie-h (banner height) so the
+   floating theme / accessibility dock sits above it instead of under it. */
+:root {
+  --astra-cookie-border: rgba(240, 240, 232, 0.55);
+  --astra-cookie-hover: rgba(240, 240, 232, 0.08);
+}
+
+html.light,
+html[data-theme="light"] {
+  --astra-cookie-border: rgba(16, 16, 16, 0.55);
+  --astra-cookie-hover: rgba(16, 16, 16, 0.06);
+}
+
+.astra-cookie[hidden],
+.astra-cookie-modal[hidden] {
+  display: none !important;
+}
+
+.astra-cookie {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  box-sizing: border-box;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 1.1rem 1.4rem;
+  background: var(--astra-card);
+  color: var(--astra-text);
+  border: 1px solid var(--astra-line);
+  border-radius: 22px;
+  box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  animation: astra-cookie-in 0.3s ease-out;
+}
+
+@keyframes astra-cookie-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.astra-cookie-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
+.astra-cookie-text {
+  flex: 1 1 26rem;
+  min-width: 0;
+}
+
+.astra-cookie-title {
+  margin: 0 0 0.3rem;
+  color: var(--astra-text);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.astra-cookie-msg,
+.astra-cookie-note,
+.astra-cookie-cat-desc {
+  margin: 0;
+  color: var(--astra-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.astra-cookie-msg a {
+  color: var(--astra-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.astra-cookie-actions,
+.astra-cookie-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.astra-cookie-actions {
+  flex: 0 1 auto;
+}
+
+.astra-cookie-btn {
+  min-height: 44px;
+  padding: 0.6rem 1.15rem;
+  border: 1.5px solid var(--astra-cookie-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--astra-text);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.astra-cookie-btn:hover {
+  background: var(--astra-cookie-hover);
+}
+
+.astra-cookie-btn.astra-cookie-primary {
+  background: #f85030;
+  border-color: #f85030;
+  color: #161616;
+}
+
+.astra-cookie-btn.astra-cookie-primary:hover {
+  background: #ff6a4d;
+  border-color: #ff6a4d;
+}
+
+.astra-cookie :focus-visible,
+.astra-cookie-modal :focus-visible {
+  outline: 2px solid #f85030;
+  outline-offset: 3px;
+}
+
+html.astra-cookie-open .astra-dock {
+  bottom: calc(var(--astra-cookie-h, 0px) + 1.75rem);
+}
+
+html.astra-cookie-open .astra-panel {
+  max-height: none;
+  height: 100dvh;
+}
+
+.astra-cookie-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.astra-cookie-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.astra-cookie-dialog {
+  position: relative;
+  box-sizing: border-box;
+  width: min(36rem, 100%);
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  padding: 1.25rem 1.25rem 1.35rem;
+  background: var(--astra-card);
+  color: var(--astra-text);
+  border: 1px solid var(--astra-line);
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  text-align: left;
+}
+
+.astra-cookie-dialog:focus {
+  outline: none;
+}
+
+.astra-cookie-dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.astra-cookie-dialog h2 {
+  margin: 0;
+  color: var(--astra-text);
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.astra-cookie-close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--astra-cookie-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--astra-text);
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.astra-cookie-note {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 0.88rem;
+}
+
+.astra-cookie-cats {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.astra-cookie-cat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--astra-line);
+}
+
+.astra-cookie-cat-text {
+  min-width: 0;
+}
+
+.astra-cookie-cat-name {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--astra-text);
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.astra-cookie-cat-desc {
+  font-size: 0.85rem;
+}
+
+.astra-switch {
+  position: relative;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.astra-switch input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 1.7rem;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.astra-switch input:disabled {
+  cursor: not-allowed;
+}
+
+.astra-switch-track {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 1.7rem;
+  box-sizing: border-box;
+  border: 1.5px solid var(--astra-cookie-border);
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.astra-switch-track::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--astra-text);
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+}
+
+.astra-switch input:checked + .astra-switch-track {
+  background: #f85030;
+  border-color: #f85030;
+}
+
+.astra-switch input:checked + .astra-switch-track::after {
+  background: #161616;
+  transform: translate(1.25rem, -50%);
+}
+
+.astra-switch input:disabled + .astra-switch-track {
+  opacity: 0.6;
+}
+
+.astra-switch input:focus-visible + .astra-switch-track {
+  outline: 2px solid #f85030;
+  outline-offset: 3px;
+}
+
+.astra-switch-note {
+  color: var(--astra-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.astra-cookie-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.astra-cookie-footer-link {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+[data-astra-focus-target]:focus {
+  outline: none;
+}
+
+html.astra-contrast .astra-cookie-msg,
+html.astra-contrast .astra-cookie-note,
+html.astra-contrast .astra-cookie-cat-desc,
+html.astra-contrast .astra-switch-note {
+  color: var(--astra-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .astra-cookie,
+  .astra-switch-track,
+  .astra-switch-track::after {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .astra-switch-track {
+    border-color: ButtonText;
+  }
+
+  .astra-switch-track::after {
+    background: ButtonText;
+  }
+
+  .astra-switch input:checked + .astra-switch-track {
+    background: Highlight;
+    border-color: Highlight;
+  }
+}
+
+@media (max-width: 768px) {
+  .astra-cookie {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 70vh;
+    max-height: 70dvh;
+    padding: 1rem calc(1rem + env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom))
+      calc(1rem + env(safe-area-inset-left));
+    border-width: 1px 0 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .astra-cookie-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .astra-cookie-text {
+    flex: none;
+  }
+
+  .astra-cookie-msg {
+    font-size: 0.9rem;
+  }
+
+  .astra-cookie-actions,
+  .astra-cookie-dialog-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .astra-cookie-btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  html.astra-cookie-open .astra-dock {
+    bottom: calc(var(--astra-cookie-h, 0px) + 0.75rem);
+  }
+
+  html.astra-cookie-open .astra-panel {
+    max-height: none;
+    height: 100dvh;
+  }
+
+  .astra-cookie-modal {
+    padding: calc(0.75rem + env(safe-area-inset-top)) 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
+  }
+
+  .astra-cookie-dialog {
+    padding: 1rem 1rem 1.1rem;
+    border-radius: 18px;
+  }
+}
+.astra-cookie, .astra-cookie-dialog { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }

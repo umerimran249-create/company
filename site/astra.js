@@ -16,7 +16,10 @@
 
   function themeSource() {
     var saved = localStorage.getItem(THEME_KEY);
-    return saved === "light" || saved === "dark" || saved === "auto" ? saved : "auto";
+    if (saved === "light" || saved === "dark" || saved === "auto") return saved;
+    var alt = localStorage.getItem("al-theme");
+    if (alt === "light" || alt === "dark") return alt;
+    return "auto";
   }
 
   function resolvedTheme(source) {
@@ -41,9 +44,19 @@
 
   function applyTheme(source) {
     var mode = resolvedTheme(source);
-    document.documentElement.setAttribute("data-theme", mode);
-    document.documentElement.setAttribute("data-theme-source", source || themeSource());
+    var root = document.documentElement;
+    root.setAttribute("data-theme", mode);
+    root.setAttribute("data-theme-source", source || themeSource());
+    root.classList.toggle("light", mode === "light");
     paintLogos();
+    var tt = document.getElementById("tt");
+    if (tt) {
+      var use = tt.querySelector("use");
+      if (use) use.setAttribute("href", mode === "light" ? "#i-moon" : "#i-sun");
+      var label = mode === "light" ? "Switch to dark theme" : "Switch to light theme";
+      tt.setAttribute("aria-label", label);
+      tt.title = label;
+    }
     var btn = document.getElementById("astra-theme-toggle");
     if (btn) {
       var src = source || themeSource();
@@ -65,6 +78,8 @@
 
   function setThemeSource(source) {
     localStorage.setItem(THEME_KEY, source);
+    if (source === "light" || source === "dark") localStorage.setItem("al-theme", source);
+    else localStorage.removeItem("al-theme");
     applyTheme(source);
   }
 
@@ -186,17 +201,6 @@
   function mount() {
     if (document.getElementById("astra-a11y")) return;
 
-    if (!document.getElementById("astra-skip")) {
-      var skip = document.createElement("a");
-      skip.id = "astra-skip";
-      skip.className = "astra-skip";
-      skip.href = "#astra-main";
-      skip.textContent = "Skip to content";
-      document.body.prepend(skip);
-      var main = document.querySelector("section") || document.querySelector("main");
-      if (main && !main.id) main.id = "astra-main";
-    }
-
     var root = document.createElement("div");
     root.id = "astra-a11y";
     root.className = "astra-dock";
@@ -237,12 +241,24 @@
     document.body.appendChild(root);
 
     var panel = document.getElementById("astra-panel");
+    document.body.appendChild(panel);
+    var backdrop = document.createElement("button");
+    backdrop.type = "button";
+    backdrop.className = "astra-panel-backdrop";
+    backdrop.setAttribute("aria-label", "Close accessibility options");
+    backdrop.hidden = true;
+    document.body.insertBefore(backdrop, panel);
+
     var openBtn = document.getElementById("astra-open");
     var lastFocus = null;
 
     function setOpen(open) {
       panel.hidden = !open;
+      backdrop.hidden = !open;
+      document.documentElement.classList.toggle("astra-adjust-open", open);
       openBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      var adjust = document.getElementById("adjust-site");
+      if (adjust) adjust.setAttribute("aria-expanded", open ? "true" : "false");
       if (open) {
         lastFocus = document.activeElement;
         var close = document.getElementById("astra-close");
@@ -252,9 +268,30 @@
       }
     }
 
+    backdrop.addEventListener("click", function () {
+      setOpen(false);
+    });
+
     openBtn.addEventListener("click", function () {
       setOpen(panel.hidden);
     });
+    var adjustBtn = document.getElementById("adjust-site");
+    if (adjustBtn) {
+      adjustBtn.setAttribute("aria-controls", "astra-panel");
+      adjustBtn.addEventListener("click", function () {
+        setOpen(panel.hidden);
+      });
+      openBtn.hidden = true;
+      var themeFab = document.getElementById("astra-theme-toggle");
+      if (themeFab) themeFab.hidden = true;
+    }
+    var headerTheme = document.getElementById("tt");
+    if (headerTheme && !headerTheme.getAttribute("data-astra-theme")) {
+      headerTheme.setAttribute("data-astra-theme", "1");
+      headerTheme.addEventListener("click", function () {
+        setThemeSource(document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light");
+      });
+    }
     document.getElementById("astra-close").addEventListener("click", function () {
       setOpen(false);
     });
@@ -266,13 +303,13 @@
       saveA11y();
     });
 
-    root.querySelectorAll("[data-theme-choice]").forEach(function (btn) {
+    panel.querySelectorAll("[data-theme-choice]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         setThemeSource(btn.getAttribute("data-theme-choice"));
       });
     });
 
-    root.querySelectorAll("[data-a11y]").forEach(function (btn) {
+    panel.querySelectorAll("[data-a11y]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var key = btn.getAttribute("data-a11y");
         if (key === "font") settings.font = (settings.font + 1) % 4;
@@ -877,6 +914,15 @@
   }
 
   function ensureFooterLink() {
+    var legal = document.getElementById("ft-legal");
+    if (legal && !document.querySelector(".astra-cookie-footer-link")) {
+      var list = legal.parentElement && legal.parentElement.querySelector(".sf-list");
+      if (list) {
+        var row = document.createElement("li");
+        row.innerHTML = '<button type="button" class="astra-cookie-footer-link" data-cookie-action="manage">Cookie settings</button>';
+        list.appendChild(row);
+      }
+    }
     var footer = document.querySelector(".footer");
     if (!footer || footer.querySelector(".astra-cookie-footer-link") || !isHydrated(footer)) return;
     var columns = footer.querySelectorAll(".footer-column-contents");
