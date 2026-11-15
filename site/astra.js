@@ -15,10 +15,12 @@
   }
 
   function themeSource() {
+    try {
+      localStorage.removeItem("al-theme");
+      localStorage.removeItem("astra-cookie-consent");
+    } catch (e) {}
     var saved = localStorage.getItem(THEME_KEY);
     if (saved === "light" || saved === "dark" || saved === "auto") return saved;
-    var alt = localStorage.getItem("al-theme");
-    if (alt === "light" || alt === "dark") return alt;
     return "auto";
   }
 
@@ -78,8 +80,7 @@
 
   function setThemeSource(source) {
     localStorage.setItem(THEME_KEY, source);
-    if (source === "light" || source === "dark") localStorage.setItem("al-theme", source);
-    else localStorage.removeItem("al-theme");
+    try { localStorage.removeItem("al-theme"); } catch (e) {}
     applyTheme(source);
   }
 
@@ -466,48 +467,29 @@
     return errors;
   }
 
-  function mailtoBooking(data) {
-    var subject = "Video Call Booking Request from " + data.name;
-    var body =
-      "Hello AstraeLink Team,\n\nI would like to book a meeting with the following details:\n\nName: " +
-      data.name +
-      "\nEmail: " +
-      data.email +
-      "\nPreferred Date: " +
-      data.preferredDate +
-      "\nPreferred Time: " +
-      data.preferredTime +
-      "\nAdditional Notes: " +
-      (data.notes || "No additional notes") +
-      "\n\nPlease confirm the booking at your earliest convenience.\n\nBest regards,\n" +
-      data.name;
-    window.location.href =
-      "mailto:infinitivee.co@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-  }
-
   function sendBooking(data) {
-    return fetch("https://api.emailjs.com/api/v1.0/email/send", {
+    var cfg = window.ASTRA_SUPABASE || {};
+    var key = typeof cfg.anonKey === "string" ? cfg.anonKey.trim() : "";
+    if (!cfg.url || !key) return Promise.reject(new Error("Booking is not configured"));
+    return fetch(String(cfg.url).replace(/\/+$/, "") + "/rest/v1/contact_submissions", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        apikey: key,
+        Authorization: "Bearer " + key,
+        "Content-Type": "application/json",
+        Prefer: "return=minimal"
+      },
       body: JSON.stringify({
-        lib_version: "4.4.1",
-        user_id: "mbeVTD5d5ABZKTvNe",
-        service_id: "service_infinitivee",
-        template_id: "template_booking",
-        template_params: {
-          to_email: "infinitivee.co@gmail.com",
-          from_name: data.name,
-          from_email: data.email,
-          preferred_date: data.preferredDate,
-          preferred_time: data.preferredTime,
-          notes: data.notes || "No additional notes provided",
-          booking_type: "Video Call Booking",
-          submitted_at: new Date().toLocaleString(),
-          reply_to: data.email
-        }
+        form_type: "meeting",
+        full_name: data.name,
+        email: data.email,
+        meeting_date: data.preferredDate || null,
+        meeting_time: data.preferredTime || null,
+        message: data.notes || null,
+        page: location.pathname.slice(0, 200)
       })
     }).then(function (response) {
-      if (!response.ok) throw new Error("Booking email was not accepted");
+      if (!response.ok) throw new Error("Booking was not accepted");
     });
   }
 
@@ -537,11 +519,7 @@
         form.reset();
       })
       .catch(function () {
-        mailtoBooking(data);
-        if (status) {
-          status.textContent =
-            "The booking service did not accept the request, so your email app should open a draft. Send that message to finish. If it does not open, email infinitivee.co@gmail.com.";
-        }
+        if (status) status.textContent = "Couldn't send right now. Please try again in a moment or email us at info@astraealink.com.";
       })
       .then(function () {
         if (button) {
@@ -625,402 +603,3 @@
   }
 })();
 
-/* ===== Cookie consent: bottom banner + settings dialog =====
-   localStorage "astra-cookie-consent" holds
-   { version, necessary, analytics, marketing, method, timestamp }.
-   The site ships no analytics or marketing tags. Add future ones as
-   <script type="text/plain" data-astra-consent="analytics|marketing"> and
-   they run once that category is allowed. React drops foreign nodes while it
-   hydrates, so the UI is re-ensured on a timer, never from a MutationObserver. */
-(function () {
-  var KEY = "astra-cookie-consent";
-  var VERSION = 1;
-  var choice = readChoice();
-  var lastTrigger = null;
-  var resizeWatch = null;
-
-  function readChoice() {
-    try {
-      var data = JSON.parse(localStorage.getItem(KEY) || "null");
-      if (data && data.version === VERSION) return data;
-    } catch (e) {}
-    return null;
-  }
-
-  function allows(category) {
-    return category === "necessary" || !!(choice && choice[category]);
-  }
-
-  function expose() {
-    var api = { decided: !!choice };
-    if (choice) {
-      Object.keys(choice).forEach(function (key) {
-        api[key] = choice[key];
-      });
-    }
-    Object.defineProperties(api, {
-      allows: { value: allows },
-      openSettings: {
-        value: function () {
-          openDialog(document.activeElement);
-        }
-      },
-      reset: {
-        value: function () {
-          try {
-            localStorage.removeItem(KEY);
-          } catch (e) {}
-          choice = null;
-          expose();
-          emit();
-          showBanner();
-        }
-      }
-    });
-    window.astraCookieConsent = api;
-  }
-
-  function emit() {
-    document.dispatchEvent(new CustomEvent("astra:cookie-consent", { detail: choice, bubbles: true }));
-  }
-
-  function activateScripts() {
-    document.querySelectorAll('script[type="text/plain"][data-astra-consent]').forEach(function (held) {
-      if (!allows(held.getAttribute("data-astra-consent"))) return;
-      var live = document.createElement("script");
-      Array.prototype.forEach.call(held.attributes, function (attr) {
-        if (attr.name !== "type") live.setAttribute(attr.name, attr.value);
-      });
-      live.text = held.text;
-      held.parentNode.replaceChild(live, held);
-    });
-  }
-
-  function save(prefs, method) {
-    choice = {
-      version: VERSION,
-      necessary: true,
-      analytics: !!prefs.analytics,
-      marketing: !!prefs.marketing,
-      method: method,
-      timestamp: new Date().toISOString()
-    };
-    try {
-      localStorage.setItem(KEY, JSON.stringify(choice));
-    } catch (e) {}
-    expose();
-    activateScripts();
-    emit();
-    announce(
-      method === "accept-all"
-        ? "All cookies accepted."
-        : method === "reject"
-          ? "Non-essential cookies rejected."
-          : "Cookie preferences saved."
-    );
-    hideBanner();
-  }
-
-  function bannerHtml() {
-    return (
-      '<div class="astra-cookie-inner">' +
-      '<div class="astra-cookie-text">' +
-      '<h2 class="astra-cookie-title">Cookies on this site</h2>' +
-      '<p class="astra-cookie-msg">We use cookies to improve your experience, analyse traffic and personalise content. ' +
-      'You can accept all cookies or manage your preferences. Questions? <a href="/contact/">Contact us</a>.</p>' +
-      "</div>" +
-      '<div class="astra-cookie-actions">' +
-      '<button type="button" class="astra-cookie-btn" data-cookie-action="manage" aria-haspopup="dialog">Manage settings</button>' +
-      '<button type="button" class="astra-cookie-btn" data-cookie-action="reject">Reject non-essential</button>' +
-      '<button type="button" class="astra-cookie-btn astra-cookie-primary" data-cookie-action="accept">Accept All Cookies</button>' +
-      "</div></div>"
-    );
-  }
-
-  function categoryHtml(id, name, text, locked) {
-    return (
-      '<li class="astra-cookie-cat">' +
-      '<div class="astra-cookie-cat-text">' +
-      '<label class="astra-cookie-cat-name" for="astra-cc-' + id + '">' + name + "</label>" +
-      '<p class="astra-cookie-cat-desc" id="astra-cc-' + id + '-desc">' + text + "</p></div>" +
-      '<span class="astra-switch">' +
-      '<input type="checkbox" role="switch" id="astra-cc-' + id + '" aria-describedby="astra-cc-' + id + '-desc"' +
-      (locked ? " checked disabled" : ' data-cookie-category="' + id + '"') + ">" +
-      '<span class="astra-switch-track" aria-hidden="true"></span>' +
-      (locked ? '<span class="astra-switch-note" aria-hidden="true">Always on</span>' : "") +
-      "</span></li>"
-    );
-  }
-
-  function dialogHtml() {
-    return (
-      '<div class="astra-cookie-backdrop" data-cookie-action="close"></div>' +
-      '<div class="astra-cookie-dialog" role="dialog" aria-modal="true" aria-labelledby="astra-cookie-dialog-title" aria-describedby="astra-cookie-dialog-desc" tabindex="-1">' +
-      '<div class="astra-cookie-dialog-head"><div><p class="astra-kicker">Privacy</p>' +
-      '<h2 id="astra-cookie-dialog-title">Cookie settings</h2></div>' +
-      '<button type="button" class="astra-cookie-close" data-cookie-action="close" aria-label="Close cookie settings">×</button></div>' +
-      '<p class="astra-cookie-note" id="astra-cookie-dialog-desc">Choose which cookies we may use. Strictly necessary cookies keep the site working and cannot be switched off. You can change this later from Cookie settings.</p>' +
-      '<ul class="astra-cookie-cats">' +
-      categoryHtml("necessary", "Strictly necessary", "Remember your theme, accessibility options and this cookie choice. Always on.", true) +
-      categoryHtml("analytics", "Analytics", "Count visits and see which pages help people, so we can improve the site.", false) +
-      categoryHtml("marketing", "Marketing and personalisation", "Show content and offers that match your interests, here and on other sites.", false) +
-      "</ul>" +
-      '<div class="astra-cookie-dialog-actions">' +
-      '<button type="button" class="astra-cookie-btn" data-cookie-action="reject">Reject non-essential</button>' +
-      '<button type="button" class="astra-cookie-btn" data-cookie-action="save">Save preferences</button>' +
-      '<button type="button" class="astra-cookie-btn astra-cookie-primary" data-cookie-action="accept">Accept all</button>' +
-      "</div></div>"
-    );
-  }
-
-  function ensureUi() {
-    if (!document.body) return;
-    if (!document.getElementById("astra-cookie-status")) {
-      var status = document.createElement("div");
-      status.id = "astra-cookie-status";
-      status.className = "astra-cookie-sr";
-      status.setAttribute("role", "status");
-      document.body.appendChild(status);
-    }
-    if (!document.getElementById("astra-cookie-modal")) {
-      var modal = document.createElement("div");
-      modal.id = "astra-cookie-modal";
-      modal.className = "astra-cookie-modal";
-      modal.hidden = true;
-      modal.innerHTML = dialogHtml();
-      document.body.appendChild(modal);
-    }
-    if (!choice) showBanner();
-    ensurePanelLink();
-    ensureFooterLink();
-  }
-
-  function showBanner() {
-    if (!document.body) return;
-    var banner = document.getElementById("astra-cookie");
-    if (!banner) {
-      banner = document.createElement("div");
-      banner.id = "astra-cookie";
-      banner.className = "astra-cookie";
-      banner.setAttribute("role", "region");
-      banner.setAttribute("aria-label", "Cookie consent");
-      banner.innerHTML = bannerHtml();
-      var dock = document.getElementById("astra-a11y");
-      document.body.insertBefore(banner, dock || null);
-      if (typeof ResizeObserver !== "undefined") {
-        if (resizeWatch) resizeWatch.disconnect();
-        resizeWatch = new ResizeObserver(syncBannerHeight);
-        resizeWatch.observe(banner);
-      }
-    }
-    banner.hidden = false;
-    document.documentElement.classList.add("astra-cookie-open");
-    syncBannerHeight();
-  }
-
-  function hideBanner() {
-    var banner = document.getElementById("astra-cookie");
-    if (banner) banner.hidden = true;
-    document.documentElement.classList.remove("astra-cookie-open");
-    document.documentElement.style.removeProperty("--astra-cookie-h");
-  }
-
-  function syncBannerHeight() {
-    var banner = document.getElementById("astra-cookie");
-    if (!banner || banner.hidden) return;
-    var value = banner.offsetHeight + "px";
-    if (document.documentElement.style.getPropertyValue("--astra-cookie-h") !== value) {
-      document.documentElement.style.setProperty("--astra-cookie-h", value);
-    }
-  }
-
-  function announce(text) {
-    var status = document.getElementById("astra-cookie-status");
-    if (!status) return;
-    status.textContent = "";
-    setTimeout(function () {
-      status.textContent = text;
-    }, 60);
-  }
-
-  function isVisible(el) {
-    return !!(el && el.isConnected && el.getClientRects().length);
-  }
-
-  function focusables(dialog) {
-    return Array.prototype.filter.call(
-      dialog.querySelectorAll("button:not([disabled]), input:not([disabled]), a[href]"),
-      isVisible
-    );
-  }
-
-  function openDialog(trigger) {
-    ensureUi();
-    var modal = document.getElementById("astra-cookie-modal");
-    if (!modal) return;
-    var a11yPanel = document.getElementById("astra-panel");
-    if (a11yPanel && !a11yPanel.hidden) {
-      var a11yClose = document.getElementById("astra-close");
-      if (a11yClose) a11yClose.click();
-      trigger = document.getElementById("astra-open") || trigger;
-    }
-    lastTrigger = trigger && trigger !== document.body ? trigger : null;
-    modal.querySelectorAll("[data-cookie-category]").forEach(function (input) {
-      input.checked = allows(input.getAttribute("data-cookie-category"));
-    });
-    modal.hidden = false;
-    document.documentElement.classList.add("astra-cookie-modal-open");
-    modal.querySelector(".astra-cookie-dialog").focus();
-  }
-
-  function closeDialog() {
-    var modal = document.getElementById("astra-cookie-modal");
-    if (!modal || modal.hidden) return;
-    modal.hidden = true;
-    document.documentElement.classList.remove("astra-cookie-modal-open");
-    if (isVisible(lastTrigger)) {
-      lastTrigger.focus();
-    } else {
-      var main = document.getElementById("astra-main") || document.querySelector("main");
-      if (main) {
-        if (!main.hasAttribute("tabindex")) {
-          main.setAttribute("tabindex", "-1");
-          main.setAttribute("data-astra-focus-target", "");
-        }
-        main.focus({ preventScroll: true });
-      }
-    }
-    lastTrigger = null;
-  }
-
-  function ensurePanelLink() {
-    var panel = document.getElementById("astra-panel");
-    if (!panel || document.getElementById("astra-cookie-panel-link")) return;
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.id = "astra-cookie-panel-link";
-    btn.className = "astra-reset astra-cookie-panel-link";
-    btn.setAttribute("aria-haspopup", "dialog");
-    btn.setAttribute("data-cookie-action", "manage");
-    btn.textContent = "Cookie settings";
-    panel.appendChild(btn);
-  }
-
-  function isHydrated(el) {
-    if (!window.__next_f) return true;
-    return Object.keys(el).some(function (key) {
-      return key.indexOf("__reactFiber") === 0;
-    });
-  }
-
-  function ensureFooterLink() {
-    var legal = document.getElementById("ft-legal");
-    if (legal && !document.querySelector(".astra-cookie-footer-link")) {
-      var list = legal.parentElement && legal.parentElement.querySelector(".sf-list");
-      if (list) {
-        var row = document.createElement("li");
-        row.innerHTML = '<button type="button" class="astra-cookie-footer-link" data-cookie-action="manage">Cookie settings</button>';
-        list.appendChild(row);
-      }
-    }
-    var footer = document.querySelector(".footer");
-    if (!footer || footer.querySelector(".astra-cookie-footer-link") || !isHydrated(footer)) return;
-    var columns = footer.querySelectorAll(".footer-column-contents");
-    var target = null;
-    columns.forEach(function (col) {
-      if (/Cookie Policy/i.test(col.textContent)) target = col;
-    });
-    if (!target && columns.length) target = columns[columns.length - 1];
-    var item = document.createElement("div");
-    item.className = "footer-column-contents-item";
-    item.innerHTML =
-      '<p class="description grey"><button type="button" class="astra-cookie-footer-link" data-cookie-action="manage" aria-haspopup="dialog">Cookie settings</button></p>';
-    if (target) {
-      target.appendChild(item);
-    } else {
-      var bottom = footer.querySelector(".footer-content-bottom") || footer;
-      bottom.appendChild(item);
-    }
-  }
-
-  document.addEventListener("click", function (event) {
-    var el = event.target.closest && event.target.closest("[data-cookie-action]");
-    if (!el) return;
-    var action = el.getAttribute("data-cookie-action");
-    var modal = document.getElementById("astra-cookie-modal");
-    var fromDialog = !!(modal && modal.contains(el));
-    if (action === "manage") {
-      openDialog(el);
-      return;
-    }
-    if (action === "close") {
-      closeDialog();
-      return;
-    }
-    if (action === "accept") save({ analytics: true, marketing: true }, "accept-all");
-    else if (action === "reject") save({ analytics: false, marketing: false }, "reject");
-    else if (action === "save") {
-      var prefs = {};
-      modal.querySelectorAll("[data-cookie-category]").forEach(function (input) {
-        prefs[input.getAttribute("data-cookie-category")] = input.checked;
-      });
-      save(prefs, "custom");
-    } else return;
-    if (fromDialog) closeDialog();
-    else {
-      lastTrigger = null;
-      var main = document.getElementById("astra-main");
-      if (main && document.activeElement === el) {
-        if (!main.hasAttribute("tabindex")) {
-          main.setAttribute("tabindex", "-1");
-          main.setAttribute("data-astra-focus-target", "");
-        }
-        main.focus({ preventScroll: true });
-      }
-    }
-  });
-
-  document.addEventListener("keydown", function (event) {
-    var modal = document.getElementById("astra-cookie-modal");
-    if (!modal || modal.hidden) return;
-    if (event.key === "Escape") {
-      event.preventDefault();
-      event.stopPropagation();
-      closeDialog();
-      return;
-    }
-    if (event.key !== "Tab") return;
-    var items = focusables(modal);
-    if (!items.length) return;
-    var first = items[0];
-    var last = items[items.length - 1];
-    var active = document.activeElement;
-    var inside = modal.contains(active) && items.indexOf(active) !== -1;
-    if (event.shiftKey && (!inside || active === first)) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && (!inside && active !== modal.querySelector(".astra-cookie-dialog") || active === last)) {
-      event.preventDefault();
-      first.focus();
-    }
-  }, true);
-
-  window.addEventListener("storage", function (event) {
-    if (event.key !== KEY) return;
-    choice = readChoice();
-    expose();
-    activateScripts();
-    emit();
-    if (choice) hideBanner();
-    else showBanner();
-  });
-  window.addEventListener("resize", syncBannerHeight);
-
-  expose();
-  activateScripts();
-  if (document.readyState === "complete") ensureUi();
-  else window.addEventListener("load", ensureUi);
-  setTimeout(ensureUi, 800);
-  setTimeout(ensureUi, 2200);
-  setInterval(ensureUi, 1500);
-})();

@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var CONTACT_EMAIL = "Astraealink@gmail.com";
+  var CONTACT_EMAIL = "info@astraealink.com";
   var HONEYPOT_NAME = "company_website";
   var REQUEST_TIMEOUT_MS = 15000;
 
@@ -142,7 +142,7 @@
     var spec = specFor(form);
     if (!spec) return;
 
-    // Take over this form so older handlers (EmailJS / mailto) don't also fire.
+    // Take over this form so any older submit handler does not also fire.
     event.preventDefault();
     event.stopImmediatePropagation();
     ensureHoneypot(form);
